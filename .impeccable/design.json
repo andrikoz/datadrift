@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-13T18:00:00+00:00",
+  "title": "Design System: Datadrift",
+  "extensions": {
+    "colorMeta": {
+      "field": {
+        "role": "neutral",
+        "displayName": "Warm Stone Field",
+        "canonical": "#D8D2C6",
+        "tonalRamp": [
+          "oklch(15% 0.012 85)",
+          "oklch(26% 0.012 85)",
+          "oklch(37% 0.012 85)",
+          "oklch(48% 0.012 85)",
+          "oklch(59% 0.012 85)",
+          "oklch(70% 0.012 85)",
+          "oklch(82% 0.012 85)",
+          "oklch(94% 0.012 85)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Warm Ink",
+        "canonical": "#14110F",
+        "tonalRamp": [
+          "oklch(15% 0.006 50)",
+          "oklch(26% 0.006 50)",
+          "oklch(37% 0.006 50)",
+          "oklch(48% 0.006 50)",
+          "oklch(59% 0.006 50)",
+          "oklch(70% 0.006 50)",
+          "oklch(82% 0.006 50)",
+          "oklch(94% 0.006 50)"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Secondary Ink",
+        "canonical": "#4A4743",
+        "tonalRamp": [
+          "oklch(15% 0.008 60)",
+          "oklch(26% 0.008 60)",
+          "oklch(37% 0.008 60)",
+          "oklch(48% 0.008 60)",
+          "oklch(59% 0.008 60)",
+          "oklch(70% 0.008 60)",
+          "oklch(82% 0.008 60)",
+          "oklch(94% 0.008 60)"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Off-White Stock",
+        "canonical": "#F2F2EE",
+        "tonalRamp": [
+          "oklch(15% 0.004 105)",
+          "oklch(26% 0.004 105)",
+          "oklch(37% 0.004 105)",
+          "oklch(48% 0.004 105)",
+          "oklch(59% 0.004 105)",
+          "oklch(70% 0.004 105)",
+          "oklch(82% 0.004 105)",
+          "oklch(95% 0.004 105)"
+        ]
+      },
+      "on-ink": {
+        "role": "neutral",
+        "displayName": "On-Ink Text",
+        "canonical": "#D6D2CA",
+        "tonalRamp": [
+          "oklch(15% 0.01 85)",
+          "oklch(26% 0.01 85)",
+          "oklch(37% 0.01 85)",
+          "oklch(48% 0.01 85)",
+          "oklch(59% 0.01 85)",
+          "oklch(70% 0.01 85)",
+          "oklch(86% 0.01 85)",
+          "oklch(94% 0.01 85)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The h1 in the stone field hero tile, lowercase, 500."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "The closing statement on the stone closing tile."
+      },
+      "section": {
+        "displayName": "Section",
+        "purpose": "The practices lead heading on its stone tile."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Practice and how-we-work names, 500, lowercase."
+      },
+      "nav": {
+        "displayName": "Nav",
+        "purpose": "Two navigation tiles in the hero spiral: underlined label (.lbl) over a 400-weight Secondary Ink descriptor (.desc, hidden at 700px and below)."
+      },
+      "deck": {
+        "displayName": "Deck",
+        "purpose": "Hero intro paragraph on the ink tile."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Tile copy, in Secondary Ink (On-Ink on the ink practice tile)."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Footer ('© 2026 datadrift · based in Greece'); the wordmark is 500 at 1.125rem."
+      },
+      "fact": {
+        "displayName": "Fact",
+        "purpose": "Hero fact tiles ('15 years of experience', 'based in greece'), 500, bottom-aligned; and the how-we-work .fact line in the first two tiles."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "cut-in",
+        "value": "0.9s cubic-bezier(0.16, 1, 0.3, 1) both, 110ms delay per tile",
+        "purpose": "Tile revealed top to bottom by clip-path inset, with a 1.2% drop from above and a 0.35% overshoot that settles; the clip ends at inset(-8px) so outlines are not clipped. Plays once when the sheet is 20% visible."
+      },
+      {
+        "name": "state-fill",
+        "value": "0.2s background-color, color",
+        "purpose": "Button hover fill swap; nav tile hover fills ink and the descriptor shifts to On-Ink text."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "no animation; tiles render in final state",
+        "purpose": "Static fallback when prefers-reduced-motion is reduce or IntersectionObserver is missing."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "tablet",
+        "value": "1000px"
+      },
+      {
+        "name": "mobile",
+        "value": "700px"
+      },
+      {
+        "name": "stack",
+        "value": "480px"
+      }
+    ],
+    "sheetWidth": "--sw: min(100%, max((100svh - 6.5rem) * 1.41421356, 880px))"
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one action, marked by contrast not hue: off-white fill with ink label on the ink hero tile; hover fills stone. Inside the closing tile it inverts (ink fill, off-white label; hover off-white with ink text).",
+      "html": "<div class=\"ds-ink-ground\"><a class=\"ds-btn\" href=\"#\">Start a conversation</a></div>",
+      "css": ".ds-ink-ground{display:inline-block;background:var(--ink,#14110F);padding:1rem}.ds-btn{display:inline-block;background:var(--ground,#F2F2EE);color:var(--ink,#14110F);font-family:'Hanken Grotesk',system-ui,sans-serif;font-weight:500;font-size:0.9375rem;letter-spacing:-0.01em;padding:0.8em 1.3em;text-decoration:none;transition:background-color .2s,color .2s}.ds-btn:hover{background:var(--field,#D8D2C6);color:var(--ink,#14110F)}.ds-btn:focus-visible{outline:3px solid var(--ground,#F2F2EE);outline-offset:3px}"
+    },
+    {
+      "name": "Navigation Tile",
+      "kind": "nav",
+      "refersTo": "nav-tile",
+      "description": "An underlined lowercase label over a one-line descriptor, filling a hero spiral tile; fills ink on hover (descriptor flips to #D6D2CA); focus ring drawn inside the tile (outline-offset -8px), ink, or off-white when hovered and focused. Hidden descriptor at 700px and below.",
+      "html": "<a class=\"ds-nav\" href=\"#\"><span class=\"lbl\">practices</span><span class=\"desc\">seven practices, from architecture to product</span></a>",
+      "css": ".ds-nav{display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;gap:0.6em;min-height:7rem;padding:1.1rem 1.2rem;background:var(--ground,#F2F2EE);color:var(--ink,#14110F);border-right:1.5px solid var(--ink,#14110F);border-bottom:1.5px solid var(--ink,#14110F);font-family:'Hanken Grotesk',system-ui,sans-serif;font-weight:500;font-size:1.25rem;letter-spacing:-0.02em;line-height:1;text-decoration:none}.ds-nav .lbl{text-decoration:underline;text-underline-offset:.25em}.ds-nav .desc{font-weight:400;font-size:0.875rem;letter-spacing:0;line-height:1.3;color:var(--ink-2,#4A4743);max-width:15em}.ds-nav:hover{background:var(--ink,#14110F);color:var(--ground,#F2F2EE)}.ds-nav:hover .desc{color:var(--on-ink,#D6D2CA)}.ds-nav:focus-visible{outline:3px solid var(--ink,#14110F);outline-offset:-8px}.ds-nav:hover:focus-visible{outline-color:var(--ground,#F2F2EE)}"
+    },
+    {
+      "name": "Practice Tile",
+      "kind": "card",
+      "refersTo": "tile",
+      "description": "Off-white tile, top-aligned: lowercase title with Secondary Ink copy directly beneath, cut from neighbors by 1.5px ink right and bottom edges.",
+      "html": "<article class=\"ds-tile\"><h3>architecture &amp; platforms</h3><p>Systems designed to scale, drawn carefully before they are built.</p></article>",
+      "css": ".ds-tile{display:flex;flex-direction:column;justify-content:flex-start;gap:0.9em;aspect-ratio:1/1.41421356;padding:1.1rem 1.2rem;background:var(--ground,#F2F2EE);color:var(--ink,#14110F);border-right:1.5px solid var(--ink,#14110F);border-bottom:1.5px solid var(--ink,#14110F);font-family:'Hanken Grotesk',system-ui,sans-serif}.ds-tile h3{margin:0;font-weight:500;font-size:1.25rem;letter-spacing:-0.03em;line-height:1.02}.ds-tile p{margin:0;font-size:0.9375rem;line-height:1.45;color:var(--ink-2,#4A4743)}"
+    },
+    {
+      "name": "Ink Tile",
+      "kind": "card",
+      "refersTo": "tile-ink",
+      "description": "The scarce ink field: off-white title, On-Ink copy.",
+      "html": "<article class=\"ds-tile-ink\"><h3>reliability &amp; observability</h3><p>Monitoring, SLOs and incident practice.</p></article>",
+      "css": ".ds-tile-ink{display:flex;flex-direction:column;justify-content:flex-start;gap:0.9em;border-right:1.5px solid var(--ink,#14110F);border-bottom:1.5px solid var(--ink,#14110F);aspect-ratio:1/1.41421356;padding:1.1rem 1.2rem;background:var(--ink,#14110F);color:var(--ground,#F2F2EE);font-family:'Hanken Grotesk',system-ui,sans-serif}.ds-tile-ink h3{margin:0;font-weight:500;font-size:1.25rem;letter-spacing:-0.03em;line-height:1.02}.ds-tile-ink p{margin:0;font-size:0.9375rem;line-height:1.45;color:var(--on-ink,#D6D2CA)}"
+    },
+    {
+      "name": "Field Statement Tile",
+      "kind": "card",
+      "refersTo": "tile-field",
+      "description": "A stone field carrying one lowercase statement in ink.",
+      "html": "<div class=\"ds-tile-field\"><h2>seven practices, one way of working.</h2></div>",
+      "css": ".ds-tile-field{display:flex;align-items:flex-end;aspect-ratio:1/1.41421356;padding:1.1rem 1.2rem;background:var(--field,#D8D2C6);color:var(--ink,#14110F);border-right:1.5px solid var(--ink,#14110F);border-bottom:1.5px solid var(--ink,#14110F);font-family:'Hanken Grotesk',system-ui,sans-serif}.ds-tile-field h2{margin:0;font-weight:500;font-size:1.75rem;letter-spacing:-0.03em;line-height:1}"
+    },
+    {
+      "name": "Sheet",
+      "kind": "custom",
+      "description": "A 1:1.414 rectangle (701px wide and up) cut into tiles; the sheet draws top and left cuts, tiles draw right and bottom, 1.5px declared (1px rendered on standard displays) (2 x 2 shown; built rows are weighted, 0.75fr / 1fr). The first two how-we-work tiles end with a bottom-pinned .fact line in ink, 500 weight.",
+      "html": "<div class=\"ds-sheet\"><div class=\"ds-cell\">small and senior</div><div class=\"ds-cell\">specialists, as needed</div><div class=\"ds-cell\">built to be run</div><div class=\"ds-cell ds-end\">let&rsquo;s make something that holds.</div></div>",
+      "css": ".ds-sheet{display:grid;grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,1fr);aspect-ratio:1.41421356;width:100%;border-top:1.5px solid var(--ink,#14110F);border-left:1.5px solid var(--ink,#14110F);font-family:'Hanken Grotesk',system-ui,sans-serif;font-weight:500;letter-spacing:-0.03em;color:var(--ink,#14110F)}.ds-cell{padding:1rem 1.2rem;background:var(--ground,#F2F2EE);border-right:1.5px solid var(--ink,#14110F);border-bottom:1.5px solid var(--ink,#14110F)}.ds-end{background:var(--field,#D8D2C6)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "One Ratio",
+    "overview": "Every sheet on the page is the same rectangle: an ISO A-series proportion, 1 : 1.414 (the square root of two). Fold or cut an A-series sheet in half and you get two sheets of the same shape, so the page is built by cutting sheets rather than by placing boxes. The hero is one landscape sheet cut into a spiral of unit tiles; the practices are one sheet cut into a 4 x 2 grid whose lower row is shorter (1fr / 0.7fr); how-we-work is one sheet cut 2 x 2 with a shorter upper row (0.75fr / 1fr). The ratio belongs to the sheet; tiles inside the lower sheets are cut by stated row weights, not always equal halves. A firm that says it builds systems that hold shows a system that holds: one proportion, repeated.\n\nDensity is dense and ruled. Tiles meet along ink cuts declared at 1.5px (rendered as 1px on standard displays), the same weight as the sheet's outer edge, with small crop marks outside the sheet corners. Color is flat and block-wise: off-white stock, a warm stone field, and near-black ink as surfaces, with no hue anywhere. The one action is marked by contrast: the black hero tile and the button set against it. Everything is square, flat, and unornamented; the only ornament is the cut line and the crop mark. There is no logo; the studio is a typeset lowercase wordmark.\n\nMotion is the cut: each tile is revealed top to bottom by a clip-path wipe and settles with a small overshoot, once, on viewport entry.",
+    "keyCharacteristics": [
+      "Sheets hold 1 : 1.414 down to 701px wide. At 700px and below the hero is a portrait 8 x 16 spiral (about 0.65 at 390px, measured), and below 480px it stacks as separate sheets; the stacked practice and how-we-work sheets are not A-series.",
+      "Type size is derived from sheet width (container query units) with rem floors, so type scales with the sheet.",
+      "Three flat surfaces (stone field, ink, off-white) separated by ink cuts (1.5px declared); no colour on the page, the action is marked by contrast.",
+      "One typeface (Hanken Grotesk, self-hosted, 400 and 500), lowercase headings.",
+      "Hero tiles carry content: two navigation links with a one-line descriptor and two fact tiles; the tablet and phone layouts follow the sheet ratio rules unchanged.",
+      "No shadows, no radii, no on-page imagery; crop marks and cuts are the only ornament. The only raster is og.png (1200 x 630), the social preview, authored in HTML with the site's own fonts and palette and screenshotted with headless Chrome; no generative image."
+    ],
+    "rules": [
+      {
+        "name": "The Contrast Is The Action Rule",
+        "body": "There is no accent hue. The action is marked by contrast: the black hero tile and the button against it (off-white on ink, 16.7:1), and the ink button on the stone closing tile. Do not add a colour to make the action stand out.",
+        "section": "colors"
+      },
+      {
+        "name": "The Three Surfaces Rule",
+        "body": "Surfaces are stone field, ink, or off-white, flat and edge to edge within a tile. A new surface does not introduce another color, a tint, or a gradient.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink Tile Rule",
+        "body": "Ink fields are scarce: one among the seven practices, one in the hero's upper right, and one unit tile at the hero spiral's end. Add an ink tile only to mark a single distinction.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink Label Rule",
+        "body": "Text on the stone field and on the off-white button is always Ink, never off-white. The button inverts with its tile: off-white with Ink text on the ink hero tile, Ink with off-white text on the stone closing tile (.end), so it is always the highest-contrast object in its tile.",
+        "section": "colors"
+      },
+      {
+        "name": "The Sheet-Scaled Type Rule",
+        "body": "Type inside a sheet is sized in cqw (container query width) so it scales with the sheet, always with a rem floor of 0.9375rem for reading copy (1.25rem for titles). Do not size sheet type in vw.",
+        "section": "typography"
+      },
+      {
+        "name": "The Lowercase Voice Rule",
+        "body": "Headings, nav labels and descriptors, hero fact labels, and the wordmark are lowercase; body copy and the button label keep sentence case.",
+        "section": "typography"
+      },
+      {
+        "name": "The Two Weights Rule",
+        "body": "Only 400 and 500 ship. Hierarchy comes from size and color, not bold or italic.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Do keep every new sheet at 1 : 1.414 (701px wide and up) and cut it into stated units (the hero spiral, 4 x 2, 2 x 2); row weights may differ (practices 1fr / 0.7fr, how-we-work 0.75fr / 1fr) while the outer sheet stays 1 : 1.414.",
+      "Do size sheet type in cqw with a rem floor, and fall back to rem on mobile stacks.",
+      "Do draw cuts as 1.5px (declared) Ink right and bottom borders on tiles, with the sheet owning top and left.",
+      "Do keep Ink as the text color on stone and off-white, and off-white as the text color on Ink.",
+      "Do mark the action by contrast (off-white button on the ink tile, ink button on the stone tile), and keep the focus ring Ink except on the ink hero tile, where it is off-white.",
+      "Do play the cut-in once and keep a static fallback for reduced motion."
+    ],
+    "donts": [
+      "Don't add shadows, radii, gradients, or on-page imagery.",
+      "Don't add another surface color, tint, or a second typeface, or a third weight.",
+      "Don't introduce any hue or accent colour; the page is neutral, and the action is marked by contrast, not colour.",
+      "Don't invent a logo or proof (client logos, metrics, testimonials); none exists.",
+      "Don't distort the sheet ratio to fit a layout above 700px; below that, the hero turns portrait and the lower sheets stack, and the stack is not claimed to be A-series."
+    ]
+  }
+}
