@@ -68,7 +68,7 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em
 
 footer { padding-block: 2.5rem 2rem; }
 .foot {
-  display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  display: flex; justify-content: flex-end; gap: 1rem; flex-wrap: wrap;
   font-size: 0.875rem; color: var(--ink-2);
   width: var(--sw); margin-inline: auto;
 }
