@@ -57,13 +57,14 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em
 
 /* header and footer */
 .bar {
-  display: flex; justify-content: space-between; align-items: baseline;
-  padding-block: 0.35rem; font-size: 0.9375rem;
+  display: flex; justify-content: space-between; align-items: center;
+  padding-block: 0.7rem; font-size: 0.9375rem;
   width: var(--sw); margin-inline: auto;
 }
-.mark { font-weight: 500; font-size: 1.125rem; letter-spacing: -0.02em; text-decoration: none; }
+.mark { display: inline-block; padding-block: 0.4rem; text-decoration: none; color: var(--ink); line-height: 0; }
+.mark svg { display: block; height: 2.5rem; width: auto; }
 .mail { color: var(--ink-2); }
-.mail, .foot a, .mark { display: inline-block; padding-block: 0.75rem; }
+.mail, .foot a { display: inline-block; padding-block: 0.75rem; }
 .addr a { display: inline-block; padding-block: 0.4rem; }
 .mail:hover, .foot a:hover, .addr a:hover { color: var(--ink); }
 

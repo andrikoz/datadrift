@@ -111,7 +111,7 @@
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Footer ('© 2026 datadrift · based in Greece'); the wordmark is 500 at 1.125rem."
+        "purpose": "Footer ('© 2026 datadrift · based in Greece'); the wordmark is drawn as outlines in the logo SVG, not live type."
       },
       "fact": {
         "displayName": "Fact",
@@ -150,9 +150,26 @@
         "value": "480px"
       }
     ],
-    "sheetWidth": "--sw: min(100%, max((100svh - 6.5rem) * 1.41421356, 880px))"
+    "sheetWidth": "--sw: min(100%, max((100svh - 6.5rem) * 1.41421356, 880px))",
+    "logo": {
+      "sources": [
+        "brand/logo-datadrift.svg",
+        "brand/logo-alternatives/"
+      ],
+      "favicon": "favicon.svg",
+      "socialPreview": "og.png",
+      "minHeight": "2.5rem (as built)",
+      "clearSpace": "one grid cell (64 units)"
+    }
   },
   "components": [
+    {
+      "name": "Logo (Slipped Grid)",
+      "kind": "custom",
+      "description": "Header lockup, inline SVG 2.5rem tall (aria-hidden; the link carries aria-label 'Datadrift, top of page'): a 3x3 grid of 64-unit squares (12 gap) in ink (currentColor), right column shifted down 34 units, centre cell stone #D8D2C6, then the lowercase wordmark 'datadrift' drawn as outlines from Hanken Grotesk 500. Clear space one grid cell; no other colours. Favicon is the mark alone on off-white (favicon.svg); the social preview uses the lockup in off-white on the ink tile. Sources in brand/.",
+      "html": "<a class=\"ds-mark\" href=\"#\" aria-label=\"Datadrift, top of page\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 216 250\" aria-hidden=\"true\" focusable=\"false\"><rect x=\"0\" y=\"0\" width=\"64\" height=\"64\"/><rect x=\"76\" y=\"0\" width=\"64\" height=\"64\"/><rect x=\"152\" y=\"34\" width=\"64\" height=\"64\"/><rect x=\"0\" y=\"76\" width=\"64\" height=\"64\"/><rect x=\"76\" y=\"76\" width=\"64\" height=\"64\" fill=\"#D8D2C6\"/><rect x=\"152\" y=\"110\" width=\"64\" height=\"64\"/><rect x=\"0\" y=\"152\" width=\"64\" height=\"64\"/><rect x=\"76\" y=\"152\" width=\"64\" height=\"64\"/><rect x=\"152\" y=\"186\" width=\"64\" height=\"64\"/></svg></a>",
+      "css": ".ds-mark{display:inline-block;padding:0.4rem;color:var(--ink,#14110F);line-height:0;text-decoration:none}.ds-mark svg{display:block;height:2.5rem;width:auto;fill:currentColor}"
+    },
     {
       "name": "Primary Button",
       "kind": "button",
@@ -203,14 +220,14 @@
   ],
   "narrative": {
     "northStar": "One Ratio",
-    "overview": "Every sheet on the page is the same rectangle: an ISO A-series proportion, 1 : 1.414 (the square root of two). Fold or cut an A-series sheet in half and you get two sheets of the same shape, so the page is built by cutting sheets rather than by placing boxes. The hero is one landscape sheet cut into a spiral of unit tiles; the practices are one sheet cut into a 4 x 2 grid whose lower row is shorter (1fr / 0.7fr); how-we-work is one sheet cut 2 x 2 with a shorter upper row (0.75fr / 1fr). The ratio belongs to the sheet; tiles inside the lower sheets are cut by stated row weights, not always equal halves. A firm that says it builds systems that hold shows a system that holds: one proportion, repeated.\n\nDensity is dense and ruled. Tiles meet along ink cuts declared at 1.5px (rendered as 1px on standard displays), the same weight as the sheet's outer edge, with small crop marks outside the sheet corners. Color is flat and block-wise: off-white stock, a warm stone field, and near-black ink as surfaces, with no hue anywhere. The one action is marked by contrast: the black hero tile and the button set against it. Everything is square, flat, and unornamented; the only ornament is the cut line and the crop mark. There is no logo; the studio is a typeset lowercase wordmark.\n\nMotion is the cut: each tile is revealed top to bottom by a clip-path wipe and settles with a small overshoot, once, on viewport entry.",
+    "overview": "Every sheet on the page is the same rectangle: an ISO A-series proportion, 1 : 1.414 (the square root of two). Fold or cut an A-series sheet in half and you get two sheets of the same shape, so the page is built by cutting sheets rather than by placing boxes. The hero is one landscape sheet cut into a spiral of unit tiles; the practices are one sheet cut into a 4 x 2 grid whose lower row is shorter (1fr / 0.7fr); how-we-work is one sheet cut 2 x 2 with a shorter upper row (0.75fr / 1fr). The ratio belongs to the sheet; tiles inside the lower sheets are cut by stated row weights, not always equal halves. A firm that says it builds systems that hold shows a system that holds: one proportion, repeated.\n\nDensity is dense and ruled. Tiles meet along ink cuts declared at 1.5px (rendered as 1px on standard displays), the same weight as the sheet's outer edge, with small crop marks outside the sheet corners. Color is flat and block-wise: off-white stock, a warm stone field, and near-black ink as surfaces, with no hue anywhere. The one action is marked by contrast: the black hero tile and the button set against it. Everything is square, flat, and unornamented; the only ornament is the cut line and the crop mark. The studio mark is the one drawn object: the slipped-grid logo.\n\nMotion is the cut: each tile is revealed top to bottom by a clip-path wipe and settles with a small overshoot, once, on viewport entry.",
     "keyCharacteristics": [
       "Sheets hold 1 : 1.414 down to 701px wide. At 700px and below the hero is a portrait 8 x 16 spiral (about 0.65 at 390px, measured), and below 480px it stacks as separate sheets; the stacked practice and how-we-work sheets are not A-series.",
       "Type size is derived from sheet width (container query units) with rem floors, so type scales with the sheet.",
       "Three flat surfaces (stone field, ink, off-white) separated by ink cuts (1.5px declared); no colour on the page, the action is marked by contrast.",
       "One typeface (Hanken Grotesk, self-hosted, 400 and 500), lowercase headings.",
       "Hero tiles carry content: two navigation links with a one-line descriptor and two fact tiles; the tablet and phone layouts follow the sheet ratio rules unchanged.",
-      "No shadows, no radii, no on-page imagery; crop marks and cuts are the only ornament. The only raster is og.png (1200 x 630), the social preview, authored in HTML with the site's own fonts and palette and screenshotted with headless Chrome; no generative image."
+      "No shadows, no radii, no on-page imagery; crop marks and cuts are the only ornament. The inline SVG logo and favicon.svg are the only drawn marks. The only raster is og.png (1200 x 630), the social preview, with the off-white logo lockup on the ink tile; no generative image."
     ],
     "rules": [
       {
@@ -240,7 +257,7 @@
       },
       {
         "name": "The Lowercase Voice Rule",
-        "body": "Headings, nav labels and descriptors, hero fact labels, and the wordmark are lowercase; body copy and the button label keep sentence case.",
+        "body": "Headings, nav labels and descriptors, hero fact labels, and the drawn wordmark are lowercase; body copy and the button label keep sentence case.",
         "section": "typography"
       },
       {
@@ -255,13 +272,14 @@
       "Do draw cuts as 1.5px (declared) Ink right and bottom borders on tiles, with the sheet owning top and left.",
       "Do keep Ink as the text color on stone and off-white, and off-white as the text color on Ink.",
       "Do mark the action by contrast (off-white button on the ink tile, ink button on the stone tile), and keep the focus ring Ink except on the ink hero tile, where it is off-white.",
+      "Do use the logo only as built: Ink (`currentColor`) grid with the Stone centre cell (`#D8D2C6`), on off-white or stone; on the ink tile (social preview) the lockup is off-white with the stone centre cell. Keep clear space of one grid cell (64 units) on every side, and never render it shorter than the built 2.5rem header height.",
       "Do play the cut-in once and keep a static fallback for reduced motion."
     ],
     "donts": [
       "Don't add shadows, radii, gradients, or on-page imagery.",
       "Don't add another surface color, tint, or a second typeface, or a third weight.",
       "Don't introduce any hue or accent colour; the page is neutral, and the action is marked by contrast, not colour.",
-      "Don't invent a logo or proof (client logos, metrics, testimonials); none exists.",
+      "Don't recolour the logo beyond Ink / off-white with the Stone centre cell, retype the wordmark in live text, or restyle, stretch, outline or shadow it; do not invent client logos or proof (metrics, testimonials); none exists.",
       "Don't distort the sheet ratio to fit a layout above 700px; below that, the hero turns portrait and the lower sheets stack, and the stack is not claimed to be A-series."
     ]
   }
