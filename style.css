@@ -63,10 +63,8 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em
 }
 .mark { display: inline-block; padding-block: 0.4rem; text-decoration: none; color: var(--ink); line-height: 0; }
 .mark svg { display: block; height: 2.5rem; width: auto; }
-.mail { color: var(--ink-2); }
-.mail, .foot a { display: inline-block; padding-block: 0.75rem; }
 .addr a { display: inline-block; padding-block: 0.4rem; }
-.mail:hover, .foot a:hover, .addr a:hover { color: var(--ink); }
+.addr a:hover { color: var(--ink); }
 
 footer { padding-block: 2.5rem 2rem; }
 .foot {

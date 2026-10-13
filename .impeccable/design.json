@@ -111,7 +111,7 @@
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Footer ('© 2026 datadrift · based in Greece'); the wordmark is drawn as outlines in the logo SVG, not live type."
+        "purpose": "Footer ('© 2026 datadrift'); the wordmark is drawn as outlines in the logo SVG, not live type."
       },
       "fact": {
         "displayName": "Fact",

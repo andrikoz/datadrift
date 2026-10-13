@@ -137,7 +137,7 @@ A fully neutral, warm palette with no accent hue: a stone field, a warm near-bla
 - **Warm Stone Field** (`{colors.field}`): the large fields: the hero headline tile, the practices lead tile, the closing tile; also the button hover fill on the ink hero tile. Text on it is Ink (about 11:1).
 - **Warm Ink** (`{colors.ink}`): headings, body text, every cut and sheet border, crop marks, the ink tiles, selection fill, the focus ring on every tile except the ink hero tile, button labels on off-white, and the closing-tile button fill.
 - **Off-White Stock** (`{colors.ground}`): page ground and tile ground; text on ink tiles; the button fill on the ink hero tile (Ink label); the closing-tile button label and hover fill; the focus ring on the ink hero tile.
-- **Secondary Ink** (`{colors.ink-2}`): copy on off-white tiles, the email link in the header, the footer.
+- **Secondary Ink** (`{colors.ink-2}`): copy on off-white tiles and the footer.
 - **On-Ink Text** (`{colors.on-ink}`): paragraph copy on the ink tile in the practices sheet, a slightly softened off-white for long text on ink.
 
 ### Named Rules
@@ -185,7 +185,7 @@ Each sheet is a CSS grid. The hero spiral has equal unit cells; the practices an
 
 Cuts are drawn once, by one rule: the sheet owns its top and left edges and every tile draws its right and bottom edges (one `--cut`, 1.5px declared, 1px rendered on standard displays), so each seam and the outer frame are the same weight with no per-tile overrides.
 
-Tile padding is `{spacing.tile-pad}` (cqw-based; 12px on the hero at 700px and below, 18px on the practice stacks). Practice and how-we-work tiles are top-aligned: the title first, the copy directly beneath it (gap 0.9em, 2.5rem on mobile stacks). Lead and closing tiles differ: the lead heading sits at the tile bottom, the closing tile sets heading top and action bottom (space-between). The header bar has 0.7rem block padding with items centered; the logo link carries 0.4rem block padding around a 2.5rem-tall SVG, and the header email and footer links 0.75rem (tap targets about 45px). The closing tile ends with the line "Tell us what you are building: info@datadrift.gr" (the address is a link, 0.4rem block padding). The footer reads "© 2026 datadrift · based in Greece". Crop marks, 8px ticks at 14px outside each corner, frame each sheet and are hidden at 700px and below.
+Tile padding is `{spacing.tile-pad}` (cqw-based; 12px on the hero at 700px and below, 18px on the practice stacks). Practice and how-we-work tiles are top-aligned: the title first, the copy directly beneath it (gap 0.9em, 2.5rem on mobile stacks). Lead and closing tiles differ: the lead heading sits at the tile bottom, the closing tile sets heading top and action bottom (space-between). The header bar has 0.7rem block padding with items centered; the logo link carries 0.4rem block padding around a 2.5rem-tall SVG. There is no header or footer email link. The closing tile ends with the line "Tell us what you are building: info@datadrift.gr" (the address is a link, 0.4rem block padding). The footer reads "© 2026 datadrift". Crop marks, 8px ticks at 14px outside each corner, frame each sheet and are hidden at 700px and below.
 
 ## Elevation & Depth
 
@@ -212,7 +212,7 @@ Square. No radii anywhere. Form language is the rectangle, the 1.414 proportion,
 - Tiles are separated only by the Ink cuts (1.5px declared) they draw on their right and bottom edges; the sheet draws top and left.
 
 ### Navigation
-The header is the logo link (left, `aria-label="Datadrift, top of page"`, SVG `aria-hidden`) and the email link in Secondary Ink (right), no menu. Inside the hero, two nav tiles (`.t3` "practices", `.t4` "how we work") stack an underlined 500-weight label (`.lbl`) over a one-line descriptor (`.desc`: "seven practices, from architecture to product"; "a small senior core, with associates as needed"), aligned to the tile bottom; hover fills the tile Ink with off-white label and On-Ink descriptor; the focus ring sits inside the tile. Contact is the header and footer email, the hero button, and the closing tile. A skip link appears on focus as an Ink block. The page title is "Datadrift: senior engineering studio".
+The header is the logo link (left, `aria-label="Datadrift, top of page"`, SVG `aria-hidden`) alone, no menu and no email link. Inside the hero, two nav tiles (`.t3` "practices", `.t4` "how we work") stack an underlined 500-weight label (`.lbl`) over a one-line descriptor (`.desc`: "seven practices, from architecture to product"; "a small senior core, with associates as needed"), aligned to the tile bottom; hover fills the tile Ink with off-white label and On-Ink descriptor; the focus ring sits inside the tile. Contact is the two buttons (hero and closing tile) and the address line in the closing tile. A skip link appears on focus as an Ink block. The page title is "Datadrift: senior engineering studio".
 
 ### Social preview
 `og.png` (1200 x 630) is referenced by `og:image`, `og:image:width`, `og:image:height` and `twitter:card` `summary_large_image`. Its composition reuses the sheet language: a stone headline sheet, an ink tile carrying the logo lockup in off-white (stone centre cell kept), and an off-white scope line. Regenerated from the lockup in `brand/`; it is not an on-page image.
