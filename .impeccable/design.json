@@ -5,23 +5,23 @@
   "extensions": {
     "colorMeta": {
       "field": {
-        "role": "neutral",
-        "displayName": "Warm Stone Field",
-        "canonical": "#D8D2C6",
+        "role": "primary",
+        "displayName": "Sage Field",
+        "canonical": "#CBD3C0",
         "tonalRamp": [
-          "oklch(15% 0.012 85)",
-          "oklch(26% 0.012 85)",
-          "oklch(37% 0.012 85)",
-          "oklch(48% 0.012 85)",
-          "oklch(59% 0.012 85)",
-          "oklch(70% 0.012 85)",
-          "oklch(82% 0.012 85)",
-          "oklch(94% 0.012 85)"
+          "oklch(15% 0.022 95)",
+          "oklch(26% 0.022 95)",
+          "oklch(37% 0.022 95)",
+          "oklch(48% 0.022 95)",
+          "oklch(59% 0.022 95)",
+          "oklch(70% 0.022 95)",
+          "oklch(82% 0.022 95)",
+          "oklch(94% 0.022 95)"
         ]
       },
       "ink": {
         "role": "neutral",
-        "displayName": "Warm Ink",
+        "displayName": "Quiet Ink",
         "canonical": "#14110F",
         "tonalRamp": [
           "oklch(15% 0.006 50)",
@@ -83,15 +83,15 @@
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "The h1 in the stone field hero tile, lowercase, 500."
+        "purpose": "The h1 in the sage field hero tile, lowercase, 500."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "The closing statement on the stone closing tile."
+        "purpose": "The closing statement on the sage closing tile."
       },
       "section": {
         "displayName": "Section",
-        "purpose": "The practices lead heading on its stone tile."
+        "purpose": "The practices lead heading on its sage tile."
       },
       "title": {
         "displayName": "Title",
@@ -166,17 +166,17 @@
     {
       "name": "Logo (Slipped Grid)",
       "kind": "custom",
-      "description": "Header lockup, inline SVG 2.5rem tall (aria-hidden; the link carries aria-label 'Datadrift, top of page'): a 3x3 grid of 64-unit squares (12 gap) in ink (currentColor), right column shifted down 34 units, centre cell stone #D8D2C6, then the lowercase wordmark 'datadrift' drawn as outlines from Hanken Grotesk 500. Clear space one grid cell; no other colours. Favicon is the mark alone on off-white (favicon.svg); the social preview uses the lockup in off-white on the ink tile. Sources in brand/.",
-      "html": "<a class=\"ds-mark\" href=\"#\" aria-label=\"Datadrift, top of page\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 216 250\" aria-hidden=\"true\" focusable=\"false\"><rect x=\"0\" y=\"0\" width=\"64\" height=\"64\"/><rect x=\"76\" y=\"0\" width=\"64\" height=\"64\"/><rect x=\"152\" y=\"34\" width=\"64\" height=\"64\"/><rect x=\"0\" y=\"76\" width=\"64\" height=\"64\"/><rect x=\"76\" y=\"76\" width=\"64\" height=\"64\" fill=\"#D8D2C6\"/><rect x=\"152\" y=\"110\" width=\"64\" height=\"64\"/><rect x=\"0\" y=\"152\" width=\"64\" height=\"64\"/><rect x=\"76\" y=\"152\" width=\"64\" height=\"64\"/><rect x=\"152\" y=\"186\" width=\"64\" height=\"64\"/></svg></a>",
+      "description": "Header lockup, inline SVG 2.5rem tall (aria-hidden; the link carries aria-label 'Datadrift, top of page'): a 3x3 grid of 64-unit squares (12 gap) in ink (currentColor), right column shifted down 34 units, centre cell sage #CBD3C0, then the lowercase wordmark 'datadrift' drawn as outlines from Hanken Grotesk 500. Clear space one grid cell; no other colours. Favicon is the mark alone on off-white (favicon.svg); the social preview uses the lockup in off-white on the ink tile. Sources in brand/.",
+      "html": "<a class=\"ds-mark\" href=\"#\" aria-label=\"Datadrift, top of page\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 216 250\" aria-hidden=\"true\" focusable=\"false\"><rect x=\"0\" y=\"0\" width=\"64\" height=\"64\"/><rect x=\"76\" y=\"0\" width=\"64\" height=\"64\"/><rect x=\"152\" y=\"34\" width=\"64\" height=\"64\"/><rect x=\"0\" y=\"76\" width=\"64\" height=\"64\"/><rect x=\"76\" y=\"76\" width=\"64\" height=\"64\" fill=\"#CBD3C0\"/><rect x=\"152\" y=\"110\" width=\"64\" height=\"64\"/><rect x=\"0\" y=\"152\" width=\"64\" height=\"64\"/><rect x=\"76\" y=\"152\" width=\"64\" height=\"64\"/><rect x=\"152\" y=\"186\" width=\"64\" height=\"64\"/></svg></a>",
       "css": ".ds-mark{display:inline-block;padding:0.4rem;color:var(--ink,#14110F);line-height:0;text-decoration:none}.ds-mark svg{display:block;height:2.5rem;width:auto;fill:currentColor}"
     },
     {
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "The one action, marked by contrast not hue: off-white fill with ink label on the ink hero tile; hover fills stone. Inside the closing tile it inverts (ink fill, off-white label; hover off-white with ink text).",
+      "description": "The one action, marked by contrast not hue (sage is not an accent): off-white fill with ink label on the ink hero tile; hover fills sage. Inside the closing tile it inverts (ink fill, off-white label; hover off-white with ink text).",
       "html": "<div class=\"ds-ink-ground\"><a class=\"ds-btn\" href=\"#\">Start a conversation</a></div>",
-      "css": ".ds-ink-ground{display:inline-block;background:var(--ink,#14110F);padding:1rem}.ds-btn{display:inline-block;background:var(--ground,#F2F2EE);color:var(--ink,#14110F);font-family:'Hanken Grotesk',system-ui,sans-serif;font-weight:500;font-size:0.9375rem;letter-spacing:-0.01em;padding:0.8em 1.3em;text-decoration:none;transition:background-color .2s,color .2s}.ds-btn:hover{background:var(--field,#D8D2C6);color:var(--ink,#14110F)}.ds-btn:focus-visible{outline:3px solid var(--ground,#F2F2EE);outline-offset:3px}"
+      "css": ".ds-ink-ground{display:inline-block;background:var(--ink,#14110F);padding:1rem}.ds-btn{display:inline-block;background:var(--ground,#F2F2EE);color:var(--ink,#14110F);font-family:'Hanken Grotesk',system-ui,sans-serif;font-weight:500;font-size:0.9375rem;letter-spacing:-0.01em;padding:0.8em 1.3em;text-decoration:none;transition:background-color .2s,color .2s}.ds-btn:hover{background:var(--field,#CBD3C0);color:var(--ink,#14110F)}.ds-btn:focus-visible{outline:3px solid var(--ground,#F2F2EE);outline-offset:3px}"
     },
     {
       "name": "Navigation Tile",
@@ -206,25 +206,25 @@
       "name": "Field Statement Tile",
       "kind": "card",
       "refersTo": "tile-field",
-      "description": "A stone field carrying one lowercase statement in ink.",
+      "description": "A sage field carrying one lowercase statement in ink.",
       "html": "<div class=\"ds-tile-field\"><h2>seven practices, one way of working.</h2></div>",
-      "css": ".ds-tile-field{display:flex;align-items:flex-end;aspect-ratio:1/1.41421356;padding:1.1rem 1.2rem;background:var(--field,#D8D2C6);color:var(--ink,#14110F);border-right:1.5px solid var(--ink,#14110F);border-bottom:1.5px solid var(--ink,#14110F);font-family:'Hanken Grotesk',system-ui,sans-serif}.ds-tile-field h2{margin:0;font-weight:500;font-size:1.75rem;letter-spacing:-0.03em;line-height:1}"
+      "css": ".ds-tile-field{display:flex;align-items:flex-end;aspect-ratio:1/1.41421356;padding:1.1rem 1.2rem;background:var(--field,#CBD3C0);color:var(--ink,#14110F);border-right:1.5px solid var(--ink,#14110F);border-bottom:1.5px solid var(--ink,#14110F);font-family:'Hanken Grotesk',system-ui,sans-serif}.ds-tile-field h2{margin:0;font-weight:500;font-size:1.75rem;letter-spacing:-0.03em;line-height:1}"
     },
     {
       "name": "Sheet",
       "kind": "custom",
       "description": "A 1:1.414 rectangle (701px wide and up) cut into tiles; the sheet draws top and left cuts, tiles draw right and bottom, 1.5px declared (1px rendered on standard displays) (2 x 2 shown; built rows are weighted, 0.75fr / 1fr). The first two how-we-work tiles end with a bottom-pinned .fact line in ink, 500 weight.",
       "html": "<div class=\"ds-sheet\"><div class=\"ds-cell\">small and senior</div><div class=\"ds-cell\">specialists, as needed</div><div class=\"ds-cell\">built to be run</div><div class=\"ds-cell ds-end\">let&rsquo;s make something that holds.</div></div>",
-      "css": ".ds-sheet{display:grid;grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,1fr);aspect-ratio:1.41421356;width:100%;border-top:1.5px solid var(--ink,#14110F);border-left:1.5px solid var(--ink,#14110F);font-family:'Hanken Grotesk',system-ui,sans-serif;font-weight:500;letter-spacing:-0.03em;color:var(--ink,#14110F)}.ds-cell{padding:1rem 1.2rem;background:var(--ground,#F2F2EE);border-right:1.5px solid var(--ink,#14110F);border-bottom:1.5px solid var(--ink,#14110F)}.ds-end{background:var(--field,#D8D2C6)}"
+      "css": ".ds-sheet{display:grid;grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,1fr);aspect-ratio:1.41421356;width:100%;border-top:1.5px solid var(--ink,#14110F);border-left:1.5px solid var(--ink,#14110F);font-family:'Hanken Grotesk',system-ui,sans-serif;font-weight:500;letter-spacing:-0.03em;color:var(--ink,#14110F)}.ds-cell{padding:1rem 1.2rem;background:var(--ground,#F2F2EE);border-right:1.5px solid var(--ink,#14110F);border-bottom:1.5px solid var(--ink,#14110F)}.ds-end{background:var(--field,#CBD3C0)}"
     }
   ],
   "narrative": {
     "northStar": "One Ratio",
-    "overview": "Every sheet on the page is the same rectangle: an ISO A-series proportion, 1 : 1.414 (the square root of two). Fold or cut an A-series sheet in half and you get two sheets of the same shape, so the page is built by cutting sheets rather than by placing boxes. The hero is one landscape sheet cut into a spiral of unit tiles; the practices are one sheet cut into a 4 x 2 grid whose lower row is shorter (1fr / 0.7fr); how-we-work is one sheet cut 2 x 2 with a shorter upper row (0.75fr / 1fr). The ratio belongs to the sheet; tiles inside the lower sheets are cut by stated row weights, not always equal halves. A firm that says it builds systems that hold shows a system that holds: one proportion, repeated.\n\nDensity is dense and ruled. Tiles meet along ink cuts declared at 1.5px (rendered as 1px on standard displays), the same weight as the sheet's outer edge, with small crop marks outside the sheet corners. Color is flat and block-wise: off-white stock, a warm stone field, and near-black ink as surfaces, with no hue anywhere. The one action is marked by contrast: the black hero tile and the button set against it. Everything is square, flat, and unornamented; the only ornament is the cut line and the crop mark. The studio mark is the one drawn object: the slipped-grid logo.\n\nMotion is the cut: each tile is revealed top to bottom by a clip-path wipe and settles with a small overshoot, once, on viewport entry.",
+    "overview": "Every sheet on the page is the same rectangle: an ISO A-series proportion, 1 : 1.414 (the square root of two). Fold or cut an A-series sheet in half and you get two sheets of the same shape, so the page is built by cutting sheets rather than by placing boxes. The hero is one landscape sheet cut into a spiral of unit tiles; the practices are one sheet cut into a 4 x 2 grid whose lower row is shorter (1fr / 0.7fr); how-we-work is one sheet cut 2 x 2 with a shorter upper row (0.75fr / 1fr). The ratio belongs to the sheet; tiles inside the lower sheets are cut by stated row weights, not always equal halves. A firm that says it builds systems that hold shows a system that holds: one proportion, repeated.\n\nDensity is dense and ruled. Tiles meet along ink cuts declared at 1.5px (rendered as 1px on standard displays), the same weight as the sheet's outer edge, with small crop marks outside the sheet corners. Color is flat and block-wise: off-white stock, a muted sage field, and near-black ink as surfaces, with sage as the only hue. The one action is marked by contrast: the black hero tile and the button set against it. Everything is square, flat, and unornamented; the only ornament is the cut line and the crop mark. The studio mark is the one drawn object: the slipped-grid logo.\n\nMotion is the cut: each tile is revealed top to bottom by a clip-path wipe and settles with a small overshoot, once, on viewport entry.",
     "keyCharacteristics": [
       "Sheets hold 1 : 1.414 down to 701px wide. At 700px and below the hero is a portrait 8 x 16 spiral (about 0.65 at 390px, measured), and below 480px it stacks as separate sheets; the stacked practice and how-we-work sheets are not A-series.",
       "Type size is derived from sheet width (container query units) with rem floors, so type scales with the sheet.",
-      "Three flat surfaces (stone field, ink, off-white) separated by ink cuts (1.5px declared); no colour on the page, the action is marked by contrast.",
+      "Three flat surfaces (sage field, ink, off-white) separated by ink cuts (1.5px declared); sage is the only hue on the page, and the action is marked by contrast.",
       "One typeface (Hanken Grotesk, self-hosted, 400 and 500), lowercase headings.",
       "Hero tiles carry content: two navigation links with a one-line descriptor and two fact tiles; the tablet and phone layouts follow the sheet ratio rules unchanged.",
       "No shadows, no radii, no on-page imagery; crop marks and cuts are the only ornament. The inline SVG logo and favicon.svg are the only drawn marks. The only raster is og.png (1200 x 630), the social preview, with the off-white logo lockup on the ink tile; no generative image."
@@ -232,12 +232,12 @@
     "rules": [
       {
         "name": "The Contrast Is The Action Rule",
-        "body": "There is no accent hue. The action is marked by contrast: the black hero tile and the button against it (off-white on ink, 16.7:1), and the ink button on the stone closing tile. Do not add a colour to make the action stand out.",
+        "body": "Sage is the only hue; there are no other accent colours. The action is marked by contrast: the black hero tile and the button against it (off-white on ink, 16.7:1), and the ink button on the sage closing tile. Do not add a colour, and do not use sage as an accent, to make the action stand out.",
         "section": "colors"
       },
       {
         "name": "The Three Surfaces Rule",
-        "body": "Surfaces are stone field, ink, or off-white, flat and edge to edge within a tile. A new surface does not introduce another color, a tint, or a gradient.",
+        "body": "Surfaces are sage field, ink, or off-white, flat and edge to edge within a tile. A new surface does not introduce another color, a tint, or a gradient.",
         "section": "colors"
       },
       {
@@ -247,7 +247,7 @@
       },
       {
         "name": "The Ink Label Rule",
-        "body": "Text on the stone field and on the off-white button is always Ink, never off-white. The button inverts with its tile: off-white with Ink text on the ink hero tile, Ink with off-white text on the stone closing tile (.end), so it is always the highest-contrast object in its tile.",
+        "body": "Text on the sage field and on the off-white button is always Ink, never off-white. The button inverts with its tile: off-white with Ink text on the ink hero tile, Ink with off-white text on the sage closing tile (.end), so it is always the highest-contrast object in its tile.",
         "section": "colors"
       },
       {
@@ -270,16 +270,16 @@
       "Do keep every new sheet at 1 : 1.414 (701px wide and up) and cut it into stated units (the hero spiral, 4 x 2, 2 x 2); row weights may differ (practices 1fr / 0.7fr, how-we-work 0.75fr / 1fr) while the outer sheet stays 1 : 1.414.",
       "Do size sheet type in cqw with a rem floor, and fall back to rem on mobile stacks.",
       "Do draw cuts as 1.5px (declared) Ink right and bottom borders on tiles, with the sheet owning top and left.",
-      "Do keep Ink as the text color on stone and off-white, and off-white as the text color on Ink.",
-      "Do mark the action by contrast (off-white button on the ink tile, ink button on the stone tile), and keep the focus ring Ink except on the ink hero tile, where it is off-white.",
-      "Do use the logo only as built: Ink (`currentColor`) grid with the Stone centre cell (`#D8D2C6`), on off-white or stone; on the ink tile (social preview) the lockup is off-white with the stone centre cell. Keep clear space of one grid cell (64 units) on every side, and never render it shorter than the built 2.5rem header height.",
+      "Do keep Ink as the text color on sage and off-white, and off-white as the text color on Ink.",
+      "Do mark the action by contrast (off-white button on the ink tile, ink button on the sage tile), and keep the focus ring Ink except on the ink hero tile, where it is off-white.",
+      "Do use the logo only as built: Ink (`currentColor`) grid with the Sage centre cell (`#CBD3C0`), on off-white or sage; on the ink tile (social preview) the lockup is off-white with the sage centre cell. Keep clear space of one grid cell (64 units) on every side, and never render it shorter than the built 2.5rem header height.",
       "Do play the cut-in once and keep a static fallback for reduced motion."
     ],
     "donts": [
       "Don't add shadows, radii, gradients, or on-page imagery.",
       "Don't add another surface color, tint, or a second typeface, or a third weight.",
-      "Don't introduce any hue or accent colour; the page is neutral, and the action is marked by contrast, not colour.",
-      "Don't recolour the logo beyond Ink / off-white with the Stone centre cell, retype the wordmark in live text, or restyle, stretch, outline or shadow it; do not invent client logos or proof (metrics, testimonials); none exists.",
+      "Don't introduce any hue beyond sage or any other accent colour; sage is the only hue, and the action is marked by contrast, not colour.",
+      "Don't recolour the logo beyond Ink / off-white with the Sage centre cell, retype the wordmark in live text, or restyle, stretch, outline or shadow it; do not invent client logos or proof (metrics, testimonials); none exists.",
       "Don't distort the sheet ratio to fit a layout above 700px; below that, the hero turns portrait and the lower sheets stack, and the stack is not claimed to be A-series."
     ]
   }

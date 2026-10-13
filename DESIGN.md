@@ -1,8 +1,8 @@
 ---
 name: Datadrift
-description: A studio of senior specialists, set as sheets cut from one ISO A-series proportion in warm stone field, ink, and off-white, with no colour: the action is marked by contrast.
+description: A studio of senior specialists, set as sheets cut from one ISO A-series proportion in a muted sage field, ink, and off-white, with sage as the only hue: the action is marked by contrast.
 colors:
-  field: "#D8D2C6"
+  field: "#CBD3C0"
   ink: "#14110F"
   ink-2: "#4A4743"
   ground: "#F2F2EE"
@@ -117,37 +117,39 @@ components:
 
 Every sheet on the page is the same rectangle: an ISO A-series proportion, 1 : 1.414 (the square root of two). Fold or cut an A-series sheet in half and you get two sheets of the same shape, so the page is built by cutting sheets rather than by placing boxes. The hero is one landscape sheet cut into a spiral of unit tiles; the practices are one sheet cut into a 4 x 2 grid whose lower row is shorter (1fr / 0.7fr); how-we-work is one sheet cut 2 x 2 with a shorter upper row (0.75fr / 1fr). The ratio belongs to the sheet; the tiles inside the lower sheets are cut by stated row weights, not always into equal halves. A firm that says it builds systems that hold shows a system that holds: one proportion, repeated.
 
-Density is dense and ruled. Tiles meet along ink cuts declared at 1.5px (rendered as 1px on standard displays), the same weight as the sheet's outer edge, with small crop marks outside the sheet corners. Color is flat and block-wise: off-white stock, a warm stone field, and near-black ink as surfaces, with no hue anywhere. The one action is marked by contrast: the black hero tile and the button set against it. Everything is square, flat, and unornamented; the only ornament is the cut line and the crop mark. The studio mark is the one drawn object: the slipped-grid logo (see Logo).
+Density is dense and ruled. Tiles meet along ink cuts declared at 1.5px (rendered as 1px on standard displays), the same weight as the sheet's outer edge, with small crop marks outside the sheet corners. Color is flat and block-wise: off-white stock, a muted sage field, and near-black ink as surfaces, with sage as the only hue. The one action is marked by contrast: the black hero tile and the button set against it. Everything is square, flat, and unornamented; the only ornament is the cut line and the crop mark. The studio mark is the one drawn object: the slipped-grid logo (see Logo).
 
 Motion is the cut: each tile is revealed top to bottom by a clip-path wipe and settles with a small overshoot, once, on viewport entry.
 
 **Key Characteristics:**
 - Sheets hold 1 : 1.414 down to 701px wide. At 700px and below the hero turns into a portrait 8 x 16 spiral (about 0.65 at 390px, measured), and below 480px it stacks as separate sheets; the stacked practice and how-we-work sheets are not A-series.
 - Type size is derived from sheet width (container query units) with rem floors, so type scales with the sheet.
-- Three flat surfaces (stone field, ink, off-white) separated by ink cuts (1.5px declared); no colour on the page, the action is marked by contrast.
+- Three flat surfaces (sage field, ink, off-white) separated by ink cuts (1.5px declared); sage is the only hue on the page, and the action is marked by contrast.
 - Hero tiles carry content: two navigation links with a one-line descriptor, two fact tiles, and the tablet and phone layouts are unchanged from the sheet ratio rules.
 - One typeface (Hanken Grotesk, self-hosted, 400 and 500), lowercase headings.
-- No shadows, no radii, no on-page imagery; crop marks and cuts are the only ornament, and the inline SVG logo and `favicon.svg` are the only drawn marks. The only raster is `og.png` (1200 x 630), the social preview, authored with the site's own fonts and palette (stone headline sheet, ink tile carrying the off-white logo lockup, off-white scope line); no generative image.
+- No shadows, no radii, no on-page imagery; crop marks and cuts are the only ornament, and the inline SVG logo and `favicon.svg` are the only drawn marks. The only raster is `og.png` (1200 x 630), the social preview, authored with the site's own fonts and palette (sage headline sheet, ink tile carrying the off-white logo lockup, off-white scope line); no generative image.
 
 ## Colors
 
-A fully neutral, warm palette with no accent hue: a stone field, a warm near-black, an off-white stock, and a warm grey for secondary text.
+A quiet neutral palette plus one muted sage field: a sage field, a near-black ink, an off-white stock, and a muted grey for secondary text. Sage is the only hue.
+
+### Primary
+- **Sage Field** (`{colors.field}`): the large fields: the hero headline tile, the practices lead tile, the closing tile; also the button hover fill on the ink hero tile. Text on it is Ink (about 12.2:1).
 
 ### Neutral
-- **Warm Stone Field** (`{colors.field}`): the large fields: the hero headline tile, the practices lead tile, the closing tile; also the button hover fill on the ink hero tile. Text on it is Ink (about 11:1).
-- **Warm Ink** (`{colors.ink}`): headings, body text, every cut and sheet border, crop marks, the ink tiles, selection fill, the focus ring on every tile except the ink hero tile, button labels on off-white, and the closing-tile button fill.
+- **Quiet Ink** (`{colors.ink}`): headings, body text, every cut and sheet border, crop marks, the ink tiles, selection fill, the focus ring on every tile except the ink hero tile, button labels on off-white, and the closing-tile button fill.
 - **Off-White Stock** (`{colors.ground}`): page ground and tile ground; text on ink tiles; the button fill on the ink hero tile (Ink label); the closing-tile button label and hover fill; the focus ring on the ink hero tile.
 - **Secondary Ink** (`{colors.ink-2}`): copy on off-white tiles and the footer.
 - **On-Ink Text** (`{colors.on-ink}`): paragraph copy on the ink tile in the practices sheet, a slightly softened off-white for long text on ink.
 
 ### Named Rules
-**The Contrast Is The Action Rule.** There is no accent hue. The action is marked by contrast: the black hero tile and the button against it (off-white on ink, 16.7:1), and the ink button on the stone closing tile. Do not add a colour to make the action stand out.
+**The Contrast Is The Action Rule.** Sage is the only hue; there are no other accent colours. The action is marked by contrast: the black hero tile and the button against it (off-white on ink, 16.7:1), and the ink button on the sage closing tile. Do not add a colour, and do not use sage as an accent, to make the action stand out.
 
-**The Three Surfaces Rule.** Surfaces are stone field, ink, or off-white, flat and edge to edge within a tile. A new surface does not introduce another color, a tint, or a gradient.
+**The Three Surfaces Rule.** Surfaces are sage field, ink, or off-white, flat and edge to edge within a tile. A new surface does not introduce another color, a tint, or a gradient.
 
 **The Ink Tile Rule.** Ink fields are scarce: one among the seven practices, one in the hero's upper right, and one unit tile at the hero spiral's end. Add an ink tile only to mark a single distinction.
 
-**The Ink Label Rule.** Text on the stone field and on the off-white button is always Ink, never off-white. The button inverts with its tile: off-white with Ink text on the ink hero tile, Ink with off-white text on the stone closing tile (`.end`), so it is always the highest-contrast object in its tile.
+**The Ink Label Rule.** Text on the sage field and on the off-white button is always Ink, never off-white. The button inverts with its tile: off-white with Ink text on the ink hero tile, Ink with off-white text on the sage closing tile (`.end`), so it is always the highest-contrast object in its tile.
 
 ## Typography
 
@@ -157,7 +159,7 @@ A fully neutral, warm palette with no accent hue: a stone field, a warm near-bla
 **Character:** One even grotesque at two weights. Headings are 500, lowercase, tightly tracked and set at a near-solid leading; copy is 400.
 
 ### Hierarchy
-- **Display** (500, min(6.2cqw, 5.5rem), 0.98, -0.035em): the h1 in the stone hero tile (8.4cqw at 700px and below).
+- **Display** (500, min(6.2cqw, 5.5rem), 0.98, -0.035em): the h1 in the sage hero tile (8.4cqw at 700px and below).
 - **Headline** (500, 4.6cqw, 0.98, -0.035em): the closing statement (2rem on mobile).
 - **Section** (500, 3.2cqw, 1): the practices lead heading (1.75rem on mobile).
 - **Title** (500, max(1.25rem, 2.4cqw), 1.02, -0.03em): practice names; 2.6cqw for the 2 x 2 how-we-work names; 1.375rem on mobile.
@@ -179,9 +181,9 @@ A fully neutral, warm palette with no accent hue: a stone field, a warm near-bla
 The page is a stack of sheets inside a centered wrap (1440px max, fluid `{spacing.gutter}` side padding). A sheet's width is `--sw`: `min(100%, max((100svh - 6.5rem) * 1.41421356, 880px))`. It is the smaller of the wrap width and the width that lets a 1 : 1.414 sheet fit the viewport height less 6.5rem, but never below 880px, so tiles do not overflow on short windows; on windows shorter than about 700px tall the sheet is therefore taller than the viewport. The header and footer align to the same sheet width. Vertical rhythm between sheets is fluid (`{spacing.sheet-gap}`).
 
 Each sheet is a CSS grid. The hero spiral has equal unit cells; the practices and how-we-work sheets use weighted rows:
-- **Hero:** 16 x 8 units on a landscape sheet, cut as a spiral: an 8 x 8 stone field tile (headline and caption "For founders and product teams who need it built right the first time."), then 8 x 4 ink (deck, ending "We have worked in many startups that scaled up. We use AI across our work, with senior engineers accountable for what ships.", and button), 4 x 4 (`.t3` "practices"), 4 x 2 (`.t4` "how we work"), 2 x 2 (`.t5` fact "15 years of experience"), 2 x 1 (`.t6` fact "based in greece"), and two 1 x 1 end units (`.t7` empty, `.t8` ink), both aria-hidden. The two navigation tiles are links; the fact tiles are plain text (500 weight, bottom-aligned). There is no contact tile in the hero. The `span` labels of `.t5` and `.t6` are hidden between 701px and 1000px, where the tiles are too small; at 700px and below only `.t6`'s label is hidden (`.t5` keeps its label). The 1 : 1.414 proportion holds only down to 701px wide. At 700px and below the spiral is a portrait 8 x 16 grid (aspect-ratio declared 1 : 1.414; measured about 0.65 at 390px) and the nav descriptors are hidden. At 480px and below the hero stops being one sheet and stacks as separate sheets: the stone tile full width at the sheet ratio, the ink tile full width beneath it, then `.t3`, `.t4` and `.t5` in one row; `.t6`, `.t7` and `.t8` are hidden.
-- **Practices:** 4 x 2 cut of seven practice tiles plus one stone lead tile, rows 1fr / 0.7fr (the lower row is shorter, so tiles are not exactly equal cuts above 1000px). At 1000px and below it becomes 2 columns, each tile holding the sheet ratio (the sheet itself no longer does); at 700px and below it becomes one joined stack of full-width tiles separated by cuts (min-height 9rem, 18px padding). The stacked practice and how-we-work sheets are not A-series.
-- **How we work:** 2 x 2 cut of three practice-style tiles and a stone closing tile, rows 0.75fr / 1fr (the upper row is shorter); same tablet and mobile behavior (tiles take the sheet ratio at 1000px and below, so the tablet and phone layouts are not affected by the row weights). The first two tiles end with a bottom-pinned `.fact` line (see Tiles); the third has none.
+- **Hero:** 16 x 8 units on a landscape sheet, cut as a spiral: an 8 x 8 sage field tile (headline and caption "For founders and product teams who need it built right the first time."), then 8 x 4 ink (deck, ending "We have worked in many startups that scaled up. We use AI across our work, with senior engineers accountable for what ships.", and button), 4 x 4 (`.t3` "practices"), 4 x 2 (`.t4` "how we work"), 2 x 2 (`.t5` fact "15 years of experience"), 2 x 1 (`.t6` fact "based in greece"), and two 1 x 1 end units (`.t7` empty, `.t8` ink), both aria-hidden. The two navigation tiles are links; the fact tiles are plain text (500 weight, bottom-aligned). There is no contact tile in the hero. The `span` labels of `.t5` and `.t6` are hidden between 701px and 1000px, where the tiles are too small; at 700px and below only `.t6`'s label is hidden (`.t5` keeps its label). The 1 : 1.414 proportion holds only down to 701px wide. At 700px and below the spiral is a portrait 8 x 16 grid (aspect-ratio declared 1 : 1.414; measured about 0.65 at 390px) and the nav descriptors are hidden. At 480px and below the hero stops being one sheet and stacks as separate sheets: the sage tile full width at the sheet ratio, the ink tile full width beneath it, then `.t3`, `.t4` and `.t5` in one row; `.t6`, `.t7` and `.t8` are hidden.
+- **Practices:** 4 x 2 cut of seven practice tiles plus one sage lead tile, rows 1fr / 0.7fr (the lower row is shorter, so tiles are not exactly equal cuts above 1000px). At 1000px and below it becomes 2 columns, each tile holding the sheet ratio (the sheet itself no longer does); at 700px and below it becomes one joined stack of full-width tiles separated by cuts (min-height 9rem, 18px padding). The stacked practice and how-we-work sheets are not A-series.
+- **How we work:** 2 x 2 cut of three practice-style tiles and a sage closing tile, rows 0.75fr / 1fr (the upper row is shorter); same tablet and mobile behavior (tiles take the sheet ratio at 1000px and below, so the tablet and phone layouts are not affected by the row weights). The first two tiles end with a bottom-pinned `.fact` line (see Tiles); the third has none.
 
 Cuts are drawn once, by one rule: the sheet owns its top and left edges and every tile draws its right and bottom edges (one `--cut`, 1.5px declared, 1px rendered on standard displays), so each seam and the outer frame are the same weight with no per-tile overrides.
 
@@ -189,7 +191,7 @@ Tile padding is `{spacing.tile-pad}` (cqw-based; 12px on the hero at 700px and b
 
 ## Elevation & Depth
 
-Flat. There are no shadows, blurs, or layered surfaces. Depth comes from field contrast (stone, ink, off-white) and from the ink cuts. The only state response is fill: nav tiles and buttons swap fills on hover, and the nav descriptor shifts from Secondary Ink to On-Ink text (`#D6D2CA`) on the ink fill. No hue shifts.
+Flat. There are no shadows, blurs, or layered surfaces. Depth comes from field contrast (sage, ink, off-white) and from the ink cuts. The only state response is fill: nav tiles and buttons swap fills on hover, and the nav descriptor shifts from Secondary Ink to On-Ink text (`#D6D2CA`) on the ink fill. No hue shifts.
 
 ## Shapes
 
@@ -199,13 +201,13 @@ Square. No radii anywhere. Form language is the rectangle, the 1.414 proportion,
 
 ### Buttons
 - **Shape:** square, no border.
-- **Primary (`.btn`), on the ink hero tile:** off-white fill (`{colors.ground}`), Ink 500-weight label (max(0.9375rem, 1.3cqw)), padding 0.8em 1.3em, no underline. Hover: stone field fill, Ink text, 0.2s.
-- **Closing (`.end .btn`), on the stone closing tile:** inverted: Ink fill, off-white label. Hover: off-white fill, Ink text.
+- **Primary (`.btn`), on the ink hero tile:** off-white fill (`{colors.ground}`), Ink 500-weight label (max(0.9375rem, 1.3cqw)), padding 0.8em 1.3em, no underline. Hover: sage field fill, Ink text, 0.2s.
+- **Closing (`.end .btn`), on the sage closing tile:** inverted: Ink fill, off-white label. Hover: off-white fill, Ink text.
 - **Focus:** 3px outline, 3px offset, Ink on every tile except the ink hero tile (`.t2`), where it is off-white. Nav tiles (`.nav`) are the exception to the offset: the ring is drawn inside the tile (outline-offset -8px), Ink; a hovered and focused nav tile (`.nav:hover:focus-visible`) gets an off-white ring, since the fill is then Ink. At 700px and below the hero button is block width and centered.
 
 ### Tiles
 - **Plain tile:** off-white, Ink title, Secondary Ink copy, top-aligned.
-- **Field tile:** stone (`{colors.field}`), Ink text: hero headline, practices lead, closing tile.
+- **Field tile:** sage (`{colors.field}`), Ink text: hero headline, practices lead, closing tile.
 - **Ink tile:** Ink fill, off-white text, On-Ink copy in the practices sheet.
 - **Fact line (`.fact`):** in the three how-we-work content tiles, a bottom-pinned (margin-top auto) Ink line, 500 weight, max(1rem, 1.55cqw), line-height 1.3, max 22em: "15 years of building and running engineering, in corporate and startup companies." and "A small senior core, with associates brought in project by project." The third tile ("built to be run") carries "AI across design, build, test and run."
 - **Hero fact tiles (`.t5`, `.t6`):** "15 years of experience" and "based in greece", class `fact`, 500 weight, max(0.875rem, 1.2cqw), tracking -0.02em, bottom-aligned; the `span` labels are hidden between 701px and 1000px, and `.t6`'s also at 700px and below.
@@ -215,13 +217,13 @@ Square. No radii anywhere. Form language is the rectangle, the 1.414 proportion,
 The header is the logo link (left, `aria-label="Datadrift, top of page"`, SVG `aria-hidden`) alone, no menu and no email link. Inside the hero, two nav tiles (`.t3` "practices", `.t4` "how we work") stack an underlined 500-weight label (`.lbl`) over a one-line descriptor (`.desc`: "seven practices, from architecture to product"; "a small senior core, with associates as needed"), aligned to the tile bottom; hover fills the tile Ink with off-white label and On-Ink descriptor; the focus ring sits inside the tile. Contact is the two buttons (hero and closing tile) and the address line in the closing tile. A skip link appears on focus as an Ink block. The page title is "Datadrift: senior engineering studio".
 
 ### Social preview
-`og.png` (1200 x 630) is referenced by `og:image`, `og:image:width`, `og:image:height` and `twitter:card` `summary_large_image`. Its composition reuses the sheet language: a stone headline sheet, an ink tile carrying the logo lockup in off-white (stone centre cell kept), and an off-white scope line. Regenerated from the lockup in `brand/`; it is not an on-page image.
+`og.png` (1200 x 630) is referenced by `og:image`, `og:image:width`, `og:image:height` and `twitter:card` `summary_large_image`. Its composition reuses the sheet language: a sage headline sheet, an ink tile carrying the logo lockup in off-white (sage centre cell kept), and an off-white scope line. Regenerated from the lockup in `brand/`; it is not an on-page image.
 
 ### Favicon
-`favicon.svg` (linked as `image/svg+xml`, replacing the earlier data-URI): an off-white square (`{colors.ground}`) holding the Ink grid mark with the Stone centre cell (`{colors.field}`), the mark only, no wordmark.
+`favicon.svg` (linked as `image/svg+xml`, replacing the earlier data-URI): an off-white square (`{colors.ground}`) holding the Ink grid mark with the Sage centre cell (`{colors.field}`), the mark only, no wordmark.
 
 ### Logo
-The "slipped grid" lockup, inline SVG in the header (`.mark svg`, 2.5rem tall, width auto, viewBox 730 x 250, `aria-hidden`; the link supplies the accessible name). A 3 x 3 grid of 64-unit squares with 12-unit gaps in Ink (`currentColor`), whose right column is shifted down 34 units; the centre cell is Stone (`#D8D2C6`). Beside it, the lowercase wordmark "datadrift" is drawn as outlines from Hanken Grotesk 500 at 0.8 x 150 units, so it does not depend on the font loading. The grid is the sheet idea in miniature: cells cut from one unit, one column drifted. Sources: `brand/logo-datadrift.svg`; ten explored alternatives in `brand/logo-alternatives/` (PNG and SVG), kept as reference, not for use on the page. The mark inherits Ink via `.mark` colour; it is not otherwise themed.
+The "slipped grid" lockup, inline SVG in the header (`.mark svg`, 2.5rem tall, width auto, viewBox 730 x 250, `aria-hidden`; the link supplies the accessible name). A 3 x 3 grid of 64-unit squares with 12-unit gaps in Ink (`currentColor`), whose right column is shifted down 34 units; the centre cell is Sage (`#CBD3C0`). Beside it, the lowercase wordmark "datadrift" is drawn as outlines from Hanken Grotesk 500 at 0.8 x 150 units, so it does not depend on the font loading. The grid is the sheet idea in miniature: cells cut from one unit, one column drifted. Sources: `brand/logo-datadrift.svg`; ten explored alternatives in `brand/logo-alternatives/` (PNG and SVG), kept as reference, not for use on the page. The mark inherits Ink via `.mark` colour; it is not otherwise themed.
 
 ### Sheet
 The signature component: a 1 : 1.414 rectangle with crop marks, cut into unit tiles by a grid (equal in the hero spiral, weighted rows in the lower sheets); the sheet draws top and left cuts, tiles draw right and bottom. Any new section is a sheet cut by a stated ratio (for example 4 x 2 or 2 x 2), not a free-form layout.
@@ -235,17 +237,17 @@ Tiles enter once, when their sheet is 20% visible: a clip-path cut from the top 
 - **Do** keep every new sheet at 1 : 1.414 while it is a sheet (701px wide and up) and cut it into stated units (the hero spiral, 4 x 2, 2 x 2); row weights may differ (practices 1fr / 0.7fr, how-we-work 0.75fr / 1fr) while the outer sheet stays 1 : 1.414.
 - **Do** size sheet type in cqw with a rem floor, and fall back to rem on mobile stacks.
 - **Do** draw cuts as 1.5px Ink right and bottom borders on tiles, with the sheet owning top and left.
-- **Do** keep Ink as the text color on stone and off-white, and off-white as the text color on Ink.
-- **Do** mark the action by contrast (off-white button on the ink tile, ink button on the stone tile), and keep the focus ring Ink except on the ink hero tile, where it is off-white.
-- **Do** use the logo only as built: Ink (`currentColor`) grid with the Stone centre cell (`#D8D2C6`), on off-white or stone; on the ink tile (social preview) the lockup is off-white with the stone centre cell. Keep clear space of one grid cell (64 units) on every side, and never render it shorter than the built 2.5rem header height.
+- **Do** keep Ink as the text color on sage and off-white, and off-white as the text color on Ink.
+- **Do** mark the action by contrast (off-white button on the ink tile, ink button on the sage tile), and keep the focus ring Ink except on the ink hero tile, where it is off-white.
+- **Do** use the logo only as built: Ink (`currentColor`) grid with the Sage centre cell (`#CBD3C0`), on off-white or sage; on the ink tile (social preview) the lockup is off-white with the sage centre cell. Keep clear space of one grid cell (64 units) on every side, and never render it shorter than the built 2.5rem header height.
 - **Do** play the cut-in once and keep a static fallback for reduced motion.
 
 ### Don't:
 - **Don't** add shadows, radii, gradients, or on-page imagery.
 - **Don't** add another surface color, tint, or a second typeface, or a third weight.
-- **Don't** introduce any hue or accent colour; the page is neutral, and the action is marked by contrast, not colour.
-- **Don't** recolour the logo beyond Ink / off-white with the Stone centre cell, retype the wordmark in live text, or restyle, stretch, outline or shadow it; do not invent client logos or proof (metrics, testimonials); none exists.
+- **Don't** introduce any hue beyond sage or any other accent colour; sage is the only hue, and the action is marked by contrast, not colour.
+- **Don't** recolour the logo beyond Ink / off-white with the Sage centre cell, retype the wordmark in live text, or restyle, stretch, outline or shadow it; do not invent client logos or proof (metrics, testimonials); none exists.
 - **Don't** distort the sheet ratio to fit a layout above 700px; below that, the hero turns portrait and the lower sheets stack, and the stack is not claimed to be A-series.
 
 ### Not canonized
-Observed in the build and not recorded as rules: the hero's two smallest tiles (`.t7`, `.t8`) are empty, aria-hidden spiral units hidden at 480px and below; the logo's Stone centre cell (`#D8D2C6`) and `favicon.svg`/`og.png` colours are hard-coded in the SVG sources, and the minimum logo height is the built 2.5rem rather than a tested floor; the declared `--cut` of 1.5px renders as 1px in Chrome on standard displays, so the "same weight" claim holds only in declared value; the portrait hero measures about 0.65 rather than the declared 0.707 at 390px; the On-Ink color `#D6D2CA` is hard-coded in the stylesheet (copy on the practices ink tile and the hovered nav descriptor) rather than drawn from a custom property, and `--on-ink` is a token here but only `--field`, `--ink`, `--ink-2` and `--ground` exist in the CSS root; the unequal row weights (0.7fr, 0.75fr) are recorded as built layout, not as a license to break the ratio elsewhere; `.t5`'s label stays visible at 700px and below while `.t6`'s is hidden, and both are hidden at 701 to 1000px, a pragmatic fit to tile size rather than a rule; the `.t5`/`.t6` `fact` class carries no styles of its own (the how-we-work `.fact` rule is scoped to `.cut4`).
+Observed in the build and not recorded as rules: the ten logo alternatives in `brand/logo-alternatives/` still use the old warm stone (`#D8D2C6`) and are reference only, not updated to sage; the hero's two smallest tiles (`.t7`, `.t8`) are empty, aria-hidden spiral units hidden at 480px and below; the logo's Sage centre cell (`#CBD3C0`) and `favicon.svg`/`og.png` colours are hard-coded in the SVG sources, and the minimum logo height is the built 2.5rem rather than a tested floor; the declared `--cut` of 1.5px renders as 1px in Chrome on standard displays, so the "same weight" claim holds only in declared value; the portrait hero measures about 0.65 rather than the declared 0.707 at 390px; the On-Ink color `#D6D2CA` is hard-coded in the stylesheet (copy on the practices ink tile and the hovered nav descriptor) rather than drawn from a custom property, and `--on-ink` is a token here but only `--field`, `--ink`, `--ink-2` and `--ground` exist in the CSS root; the unequal row weights (0.7fr, 0.75fr) are recorded as built layout, not as a license to break the ratio elsewhere; `.t5`'s label stays visible at 700px and below while `.t6`'s is hidden, and both are hidden at 701 to 1000px, a pragmatic fit to tile size rather than a rule; the `.t5`/`.t6` `fact` class carries no styles of its own (the how-we-work `.fact` rule is scoped to `.cut4`).

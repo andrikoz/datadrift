@@ -13,11 +13,11 @@ Mode: Persuade. Static one-page site for Datadrift (datadrift.gr). Action: mailt
 
 THESIS: One proportion at every size: an ISO A-series sheet cut in half keeps its shape, so the page shows one design holding as it is cut smaller. Refuses the agency page of headline, three-up cards and logo wall.
 
-OWN-WORLD: Warm neutral sheets: stone field #D8D2C6, ink #14110F, off-white #F2F2EE, secondary ink #4A4743; no hue anywhere, the action is marked by the black tile and its off-white button. Hard edges, no gradients or shadows. Hanken Grotesk 400/500, lowercase headings, type sized from the sheet width. Hairline cut lines at every split, crop marks at sheet corners. Recognizable with copy removed.
+OWN-WORLD: Quiet neutral sheets with one muted sage field: sage #CBD3C0, ink #14110F, off-white #F2F2EE, secondary ink #4A4743; sage is the only hue, the action is marked by the black tile and its off-white button. Hard edges, no gradients or shadows. Hanken Grotesk 400/500, lowercase headings, type sized from the sheet width. Hairline cut lines at every split, crop marks at sheet corners. Recognizable with copy removed.
 
 STORY: Visitor sees one precise system, believes a senior studio built it, and emails.
 
-FIRST VIEWPORT: Header with wordmark and email. One landscape sheet fitted to the viewport, cut as a spiral: left half stone with the h1 at large scale; top-right quarter ink with deck and the "Start a conversation" button; smaller sheets below are two links (practices, how we work) with one-line descriptors, two true fact tiles (fifteen years of experience; based in greece) and two empty tiny sheets. On narrow screens the sheet rotates to portrait.
+FIRST VIEWPORT: Header with wordmark and email. One landscape sheet fitted to the viewport, cut as a spiral: left half sage with the h1 at large scale; top-right quarter ink with deck and the "Start a conversation" button; smaller sheets below are two links (practices, how we work) with one-line descriptors, two true fact tiles (fifteen years of experience; based in greece) and two empty tiny sheets. On narrow screens the sheet rotates to portrait.
 
 FORM: A-series spiral and equal cuts (position 3 of 7), seed key d88195f5. Signature: sheets cut into place one by one and settle with weight; every cut keeps 1:1.414.
 
