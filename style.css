@@ -139,6 +139,8 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.03em; line-height: 1.02; text-
 .nav .lbl { text-decoration: underline; text-underline-offset: 0.25em; }
 .nav .desc { font-weight: 400; font-size: max(0.875rem, 1.1cqw); letter-spacing: 0; line-height: 1.3; color: var(--ink-2); max-width: 15em; }
 .nav:hover .desc { color: #D6D2CA; }
+.nav { transition: background-color 0.2s, color 0.2s; }
+.nav .desc { transition: color 0.2s; }
 .nav:hover:focus-visible { outline-color: var(--ground); }
 .nav:hover { background: var(--ink); color: var(--ground); }
 
@@ -191,6 +193,8 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.03em; line-height: 1.02; text-
 
 @media (min-width: 701px) and (max-width: 1000px) {
   .t5 span, .t6 span { display: none; }
+  .deck { font-size: 0.875rem; line-height: 1.32; }
+  .t2 .act { margin-top: 0.6rem; }
 }
 
 @media (max-width: 700px) {
@@ -258,4 +262,16 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.03em; line-height: 1.02; text-
     70%  { opacity: 1; clip-path: inset(-8px); transform: translateY(0.35%); }
     100% { opacity: 1; clip-path: inset(-8px); transform: translateY(0); }
   }
+
+  /* crop marks arrive after the cuts, like a print job finishing */
+  .js .sheet::before, .js .sheet::after { opacity: 0; }
+  .js .sheet.in::before, .js .sheet.in::after { opacity: 1; transition: opacity 0.6s ease-out 0.9s; }
+
+  /* the logo's right column slips down once, then rests; hovering replays it */
+  .mark .slip { animation: slip 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.7s both; }
+  .mark:hover .slip { animation: slip-again 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+  @keyframes slip { from { transform: translateY(-34px); } to { transform: translateY(0); } }
+  @keyframes slip-again { from { transform: translateY(-34px); } to { transform: translateY(0); } }
+
+  .btn:active { transform: translateY(1px); }
 }

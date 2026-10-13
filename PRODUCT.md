@@ -24,7 +24,7 @@ A studio led by an engineer with 15 years across corporate and startup environme
 
 ## Capabilities and Constraints
 
-- Practices: architecture and platform engineering, reliability and observability, mobile apps, frontend apps, data, product management, AI-enabled product building.
+- Practices: architecture and platform engineering, reliability and observability, mobile apps, frontend apps, data, product management, Agentic development (renamed from AI-enabled building): AI is used across the work (design, development, testing, operations) and the studio also builds AI features, assistants and agentic workflows for clients. Do not make data-handling or privacy promises about AI tools on the page; the user wants that left unsaid because it depends on the case.
 - Static site, simple, minimal, elegant.
 - Must not be tied to the founder's name; neutral "we" voice.
 - Company name: Datadrift. Domain: datadrift.gr. Contact: info@datadrift.gr.
