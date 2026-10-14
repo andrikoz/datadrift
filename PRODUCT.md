@@ -31,7 +31,7 @@ A studio led by an engineer with 15 years across corporate and startup environme
 
 ## Brand Commitments
 
-Name: Datadrift. Logo: the 'slipped grid' lockup (3x3 grid of squares whose right column has slipped down, sage centre cell, with the lowercase wordmark), chosen by the user from ten alternatives; source files in brand/. Not tied to a personal name. Tone: simple, minimal, elegant (user's words).
+Name: Datadrift. Logo: the 'slipped grid' lockup (3x3 grid of squares whose right column has slipped down, knocked-out centre cell, with the lowercase wordmark), chosen by the user from ten alternatives; source files in brand/. Not tied to a personal name. Tone: simple, minimal, elegant (user's words).
 
 ## Evidence on Hand
 

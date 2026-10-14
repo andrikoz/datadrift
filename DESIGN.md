@@ -1,253 +1,242 @@
 ---
 name: Datadrift
-description: A studio of senior specialists, set as sheets cut from one ISO A-series proportion in a muted sage field, ink, and off-white, with sage as the only hue: the action is marked by contrast.
+description: A monochrome studio page that is simply there: black, white, Geist, one framed live diagram of a system holding under failure, everything held in a strict grid.
 colors:
-  field: "#CBD3C0"
-  ink: "#14110F"
-  ink-2: "#4A4743"
-  ground: "#F2F2EE"
-  on-ink: "#D6D2CA"
+  ground: "#F4F4F4"
+  white: "#FFFFFF"
+  ink: "#0A0A0A"
+  mid: "#5F5F5F"
+  mid-on-ink: "#A8A8A8"
+  line: "rgba(10, 10, 10, 0.2)"
+  line-on-ink: "rgba(255, 255, 255, 0.2)"
 typography:
   display:
-    fontFamily: "Hanken Grotesk, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "min(6.2cqw, 5.5rem)"
+    fontFamily: "Geist, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "clamp(2.25rem, 9.2vw, 6rem)"
     fontWeight: 500
-    lineHeight: 0.98
-    letterSpacing: "-0.035em"
+    lineHeight: 0.92
+    letterSpacing: "-0.04em"
   headline:
-    fontFamily: "Hanken Grotesk, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "4.6cqw"
+    fontFamily: "Geist, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "clamp(2rem, 5.2vw, 4.25rem)"
     fontWeight: 500
-    lineHeight: 0.98
+    lineHeight: 0.95
     letterSpacing: "-0.035em"
-  section:
-    fontFamily: "Hanken Grotesk, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "3.2cqw"
-    fontWeight: 500
-    lineHeight: 1
-    letterSpacing: "-0.03em"
   title:
-    fontFamily: "Hanken Grotesk, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "max(1.25rem, 2.4cqw)"
-    fontWeight: 500
-    lineHeight: 1.02
-    letterSpacing: "-0.03em"
-  nav:
-    fontFamily: "Hanken Grotesk, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "max(0.9375rem, 1.6cqw)"
+    fontFamily: "Geist, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "clamp(1.25rem, 2.2vw, 1.875rem)"
     fontWeight: 500
     lineHeight: 1
-    letterSpacing: "-0.02em"
-  deck:
-    fontFamily: "Hanken Grotesk, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "max(0.9375rem, 1.55cqw)"
-    fontWeight: 400
-    lineHeight: 1.38
+    letterSpacing: "-0.035em"
+  statement:
+    fontFamily: "Geist, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "clamp(1.5rem, 3.4vw, 2.75rem)"
+    fontWeight: 500
+    lineHeight: 1.2
+    letterSpacing: "-0.025em"
   body:
-    fontFamily: "Hanken Grotesk, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "max(0.9375rem, 1.3cqw)"
-    fontWeight: 400
-    lineHeight: 1.45
-  label:
-    fontFamily: "Hanken Grotesk, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "0.875rem"
+    fontFamily: "Geist, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "clamp(1rem, 1.25vw, 1.125rem)"
     fontWeight: 400
     lineHeight: 1.5
+    letterSpacing: "normal"
+  label:
+    fontFamily: "Geist Mono, ui-monospace, SF Mono, Menlo, monospace"
+    fontSize: "0.8125rem"
+    fontWeight: 500
+    lineHeight: 1
+    letterSpacing: "0.02em"
 rounded:
-  none: "0px"
+  none: "0"
 spacing:
   gutter: "clamp(16px, 3vw, 40px)"
-  tile-pad: "2.2cqw 2.4cqw"
-  tile-pad-mobile: "18px"
-  sheet-gap: "clamp(2.5rem, 6vw, 5rem)"
-  cut: "1.5px"  # declared; Chrome renders it as 1px on standard displays
+  row-inset: "clamp(10px, 1.4vw, 20px)"
+  row-pad: "1.6rem"
+  section: "clamp(3rem, 7vw, 6rem)"
+  wrap-max: "1440px"
 components:
-  button-primary:
-    backgroundColor: "{colors.ground}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.none}"
-    padding: "0.8em 1.3em"
-  button-primary-hover:
-    backgroundColor: "{colors.field}"
-    textColor: "{colors.ink}"
-  button-closing:
+  button-ink:
     backgroundColor: "{colors.ink}"
     textColor: "{colors.ground}"
-    typography: "{typography.body}"
+    typography: "{typography.label}"
     rounded: "{rounded.none}"
-    padding: "0.8em 1.3em"
-  button-closing-hover:
-    backgroundColor: "{colors.ground}"
+    padding: "0.95em 1.4em"
+  button-ink-hover:
+    backgroundColor: "transparent"
     textColor: "{colors.ink}"
-  tile:
-    backgroundColor: "{colors.ground}"
+  button-line:
+    backgroundColor: "transparent"
     textColor: "{colors.ink}"
+    typography: "{typography.label}"
     rounded: "{rounded.none}"
-    padding: "{spacing.tile-pad}"
-  tile-field:
-    backgroundColor: "{colors.field}"
-    textColor: "{colors.ink}"
-    padding: "{spacing.tile-pad}"
-  tile-ink:
+    padding: "0.95em 1.4em"
+  button-line-hover:
     backgroundColor: "{colors.ink}"
     textColor: "{colors.ground}"
-    padding: "{spacing.tile-pad}"
-  tile-ink-copy:
-    textColor: "{colors.on-ink}"
-    typography: "{typography.body}"
-  tile-copy:
-    textColor: "{colors.ink-2}"
-    typography: "{typography.body}"
-  nav-tile:
+  button-paper:
+    backgroundColor: "{colors.white}"
+    textColor: "{colors.ink}"
+    typography: "{typography.label}"
+    rounded: "{rounded.none}"
+    padding: "0.95em 1.4em"
+  button-paper-hover:
+    backgroundColor: "transparent"
+    textColor: "{colors.white}"
+  system-frame:
+    backgroundColor: "{colors.ground}"
+    textColor: "{colors.mid}"
+    rounded: "{rounded.none}"
+  row:
+    backgroundColor: "transparent"
+    textColor: "{colors.ink}"
+    padding: "1.6rem clamp(10px, 1.4vw, 20px)"
+  row-hover:
+    backgroundColor: "{colors.white}"
+  row-dark:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.white}"
+  header:
     backgroundColor: "{colors.ground}"
     textColor: "{colors.ink}"
-    typography: "{typography.nav}"
-    padding: "{spacing.tile-pad}"
-  nav-tile-hover:
+    padding: "0.6rem 0"
+  close:
     backgroundColor: "{colors.ink}"
-    textColor: "{colors.ground}"
+    textColor: "{colors.white}"
+    padding: "clamp(5rem, 12vw, 10rem) 0 1.5rem"
 ---
 
 # Design System: Datadrift
 
 ## Overview
 
-**Creative North Star: "One Ratio"**
+**Creative North Star: "The System Holding"**
 
-Every sheet on the page is the same rectangle: an ISO A-series proportion, 1 : 1.414 (the square root of two). Fold or cut an A-series sheet in half and you get two sheets of the same shape, so the page is built by cutting sheets rather than by placing boxes. The hero is one landscape sheet cut into a spiral of unit tiles; the practices are one sheet cut into a 4 x 2 grid whose lower row is shorter (1fr / 0.7fr); how-we-work is one sheet cut 2 x 2 with a shorter upper row (0.75fr / 1fr). The ratio belongs to the sheet; the tiles inside the lower sheets are cut by stated row weights, not always into equal halves. A firm that says it builds systems that hold shows a system that holds: one proportion, repeated.
+Datadrift is black and white and nothing else. There is no loader: the page is simply present. The hero mark spins in, the headline and mono subline scramble through glyph noise into place, and below the hero a light framed panel draws a small service architecture on a dot grid: requests flow through it, one replica goes down, traffic reroutes, it recovers. After that the page is held: a strict 12-column grid, 1px rules, square corners. The only thing allowed to slip is the logo, so slippage reads as the brand's single idea rather than a texture.
 
-Density is dense and ruled. Tiles meet along ink cuts declared at 1.5px (rendered as 1px on standard displays), the same weight as the sheet's outer edge, with small crop marks outside the sheet corners. Color is flat and block-wise: off-white stock, a muted sage field, and near-black ink as surfaces, with sage as the only hue. The one action is marked by contrast: the black hero tile and the button set against it. Everything is square, flat, and unornamented; the only ornament is the cut line and the crop mark. The studio mark is the one drawn object: the slipped-grid logo (see Logo).
-
-Motion is the cut: each tile is revealed top to bottom by a clip-path wipe and settles with a small overshoot, once, on viewport entry.
+Display type is Geist set uppercase and tight; labels and buttons are Geist Mono uppercase. Depth is carried by inversion (ground to ink and back), never by shadow, gradient or hue. The system is recognizable with the copy removed: ruled rows, one framed system diagram, a grid of squares with a column out of line.
 
 **Key Characteristics:**
-- Sheets hold 1 : 1.414 down to 701px wide. At 700px and below the hero turns into a portrait 8 x 16 spiral (about 0.65 at 390px, measured), and below 480px it stacks as separate sheets; the stacked practice and how-we-work sheets are not A-series.
-- Type size is derived from sheet width (container query units) with rem floors, so type scales with the sheet.
-- Three flat surfaces (sage field, ink, off-white) separated by ink cuts (1.5px declared); sage is the only hue on the page, and the action is marked by contrast.
-- Hero tiles carry content: two navigation links with a one-line descriptor, two fact tiles, and the tablet and phone layouts are unchanged from the sheet ratio rules.
-- One typeface (Hanken Grotesk, self-hosted, 400 and 500), lowercase headings.
-- No shadows, no radii, no on-page imagery; crop marks and cuts are the only ornament, and the inline SVG logo and `favicon.svg` are the only drawn marks. The only raster is `og.png` (1200 x 630), the social preview, authored with the site's own fonts and palette (sage headline sheet, ink tile carrying the off-white logo lockup, off-white scope line); no generative image.
+- Strictly monochrome: ground, white, ink, two greys. No accent hue.
+- Uppercase, tightly tracked Geist display; uppercase Geist Mono for every label and button.
+- Square corners everywhere; structure from 1px hairlines.
+- Inversion for emphasis: one black row, black close section, and the momentary ink inversion of a node inside the pale diagram.
+- No loader; one authored motion (a diagram of a service failing over and recovering) that loops quietly on a 12s cycle.
 
 ## Colors
 
-A quiet neutral palette plus one muted sage field: a sage field, a near-black ink, an off-white stock, and a muted grey for secondary text. Sage is the only hue.
+A two-surface palette (light ground, near-black ink) with white as the highest-contrast value on ink and as a hover wash on ground. Greys exist only to demote secondary text.
 
 ### Primary
-- **Sage Field** (`{colors.field}`): the large fields: the hero headline tile, the practices lead tile, the closing tile; also the button hover fill on the ink hero tile. Text on it is Ink (about 12.2:1).
+- **Ink** (`ink`, #0A0A0A): text, solid buttons, borders, focus rings, node borders, packets and status text in the system frame, the dark row and the close section.
 
 ### Neutral
-- **Quiet Ink** (`{colors.ink}`): headings, body text, every cut and sheet border, crop marks, the ink tiles, selection fill, the focus ring on every tile except the ink hero tile, button labels on off-white, and the closing-tile button fill.
-- **Off-White Stock** (`{colors.ground}`): page ground and tile ground; text on ink tiles; the button fill on the ink hero tile (Ink label); the closing-tile button label and hover fill; the focus ring on the ink hero tile.
-- **Secondary Ink** (`{colors.ink-2}`): copy on off-white tiles and the footer.
-- **On-Ink Text** (`{colors.on-ink}`): paragraph copy on the ink tile in the practices sheet, a slightly softened off-white for long text on ink.
+- **Ground** (`ground`, #F4F4F4): page background, header, text on ink buttons, the logo's cut-out cell, the system frame ground.
+- **White** (`white`, #FFFFFF): text on ink surfaces, the paper button, the row hover wash, node fills in the system frame.
+- **Mid** (`mid`, #5F5F5F): secondary copy on ground (sub line, captions, paragraphs, the system frame bar and its ILLUSTRATION label).
+- **Mid on Ink** (`mid-on-ink`, #A8A8A8): secondary copy on ink (address, footer, dark-row paragraph).
+- **Hairline** (`line`, rgba(10,10,10,0.2)): rules on ground: header border, row rules, three-column dividers, the system frame border and bar rule.
+- **Hairline on Ink** (`line-on-ink`, rgba(255,255,255,0.2)): rules on ink: the footer border.
+
+### System Frame Canvas Values (canvas only)
+The diagram uses only existing tokens drawn at alpha: ink at 13% (dot grid), 55% (live lines), 30% (dashed lines of the down node), 28% (hatch), plus white, ink and `mid` (#5F5F5F). These live inside the canvas script, not as page tokens; they are not a licence for new greys or alpha colours in CSS.
 
 ### Named Rules
-**The Contrast Is The Action Rule.** Sage is the only hue; there are no other accent colours. The action is marked by contrast: the black hero tile and the button against it (off-white on ink, 16.7:1), and the ink button on the sage closing tile. Do not add a colour, and do not use sage as an accent, to make the action stand out.
+**The No Hue Rule.** No colour enters the system. Emphasis is made by inverting a surface or changing weight, never by an accent.
 
-**The Three Surfaces Rule.** Surfaces are sage field, ink, or off-white, flat and edge to edge within a tile. A new surface does not introduce another color, a tint, or a gradient.
-
-**The Ink Tile Rule.** Ink fields are scarce: one among the seven practices, one in the hero's upper right, and one unit tile at the hero spiral's end. Add an ink tile only to mark a single distinction.
-
-**The Ink Label Rule.** Text on the sage field and on the off-white button is always Ink, never off-white. The button inverts with its tile: off-white with Ink text on the ink hero tile, Ink with off-white text on the sage closing tile (`.end`), so it is always the highest-contrast object in its tile.
+**The Two Greys Rule.** Secondary text is `mid` on ground and `mid-on-ink` on ink. Do not introduce a third grey; do not use `mid` on ink.
 
 ## Typography
 
-**Display Font:** Hanken Grotesk (with system-ui, -apple-system, Segoe UI, sans-serif)
-**Body Font:** Hanken Grotesk (same family)
+**Display Font:** Geist (with system-ui, -apple-system, Segoe UI, sans-serif)
+**Body Font:** Geist
+**Label/Mono Font:** Geist Mono (with ui-monospace, SF Mono, Menlo, monospace)
 
-**Character:** One even grotesque at two weights. Headings are 500, lowercase, tightly tracked and set at a near-solid leading; copy is 400.
+**Character:** Geist is neutral and engineered; set uppercase at negative tracking it becomes severe and compact. Geist Mono carries the machine voice for anything that acts or labels. Self-hosted woff2 (400, 500 for Geist; 400, 500 for Mono), `font-display: swap`.
 
 ### Hierarchy
-- **Display** (500, min(6.2cqw, 5.5rem), 0.98, -0.035em): the h1 in the sage hero tile (8.4cqw at 700px and below).
-- **Headline** (500, 4.6cqw, 0.98, -0.035em): the closing statement (2rem on mobile).
-- **Section** (500, 3.2cqw, 1): the practices lead heading (1.75rem on mobile).
-- **Title** (500, max(1.25rem, 2.4cqw), 1.02, -0.03em): practice names; 2.6cqw for the 2 x 2 how-we-work names; 1.375rem on mobile.
-- **Nav** (500, max(0.9375rem, 1.6cqw), 1, -0.02em): the two navigation tiles; the `.lbl` is underlined, followed by a 400-weight descriptor (`.desc`, max(0.875rem, 1.1cqw), 1.3, Secondary Ink, max 15em, hidden at 700px and below).
-- **Deck** (400, max(0.9375rem, 1.55cqw), 1.38): the hero intro, max 30em.
-- **Body** (400, max(0.9375rem, 1.3cqw), 1.45): the hero caption (max 24em) and button label; practice copy is max(1rem, 1.5cqw), how-we-work copy 1.4cqw, max 28em.
-- **Fact** (500, max(0.875rem, 1.2cqw), 1.1, -0.02em): the hero fact tiles `.t5` and `.t6`; the how-we-work `.fact` line is max(1rem, 1.55cqw).
-- **Label** (400, 0.875rem): footer; the header wordmark is no longer live type; it is drawn as outlines inside the logo SVG (see Logo).
+- **Display** (500, clamp(2.25rem, 9.2vw, 6rem), 0.92, -0.04em, uppercase): the hero h1 and the close heading (which scales to 2.5rem-6rem).
+- **Headline** (500, clamp(2rem, 5.2vw, 4.25rem), 0.95, -0.035em, uppercase): section h2, balanced wrap, max 14em.
+- **Title** (500, clamp(1.25rem, 2.2vw, 1.875rem), 1, -0.035em, uppercase): row and column h3.
+- **Statement** (500, clamp(1.5rem, 3.4vw, 2.75rem), 1.2, -0.025em, sentence case): the single large about paragraph, max 24em, balanced.
+- **Body** (400, clamp(1rem, 1.25vw, 1.125rem), 1.5, `mid`): row and column paragraphs, max 26-34em. The small intro and caption run 0.9375rem-1.25rem.
+- **Label** (Geist Mono 500, 0.8125rem, 0.02em, uppercase): buttons and nav links. The sub line scales clamp(0.875rem, 1.6vw, 1.25rem); the system frame bar and footer are 0.75rem; canvas node labels are Geist Mono 400 at 10-11px, drawn in the canvas only.
 
 ### Named Rules
-**The Sheet-Scaled Type Rule.** Type inside a sheet is sized in cqw (container query width) so it scales with the sheet, always with a rem floor of 0.9375rem for reading copy (1.25rem for titles). Do not size sheet type in vw.
+**The Case Split Rule.** Headings are uppercase Geist; prose is sentence-case Geist; anything clickable or label-like is uppercase Geist Mono. Do not mix the roles.
 
-**The Lowercase Voice Rule.** Headings, nav labels and descriptors, hero fact labels, and the drawn wordmark are lowercase; body copy and the button label keep sentence case.
-
-**The Two Weights Rule.** Only 400 and 500 ship. Hierarchy comes from size and color, not bold or italic.
+**The Tight Display Rule.** Display sizes always carry negative tracking (-0.025em to -0.04em) and line-height at or below 1.2.
 
 ## Layout
 
-The page is a stack of sheets inside a centered wrap (1440px max, fluid `{spacing.gutter}` side padding). A sheet's width is `--sw`: `min(100%, max((100svh - 6.5rem) * 1.41421356, 880px))`. It is the smaller of the wrap width and the width that lets a 1 : 1.414 sheet fit the viewport height less 6.5rem, but never below 880px, so tiles do not overflow on short windows; on windows shorter than about 700px tall the sheet is therefore taller than the viewport. The header and footer align to the same sheet width. Vertical rhythm between sheets is fluid (`{spacing.sheet-gap}`).
+A centred wrap (max 1440px) with a fluid gutter of clamp(16px, 3vw, 40px). The hero is a centred column; everything after it is left-aligned on a 12-column grid. Practice rows put the title in columns 1-5 and copy in 6-12; the how-we-work block is three equal ruled columns. Section padding is fluid, roughly clamp(3rem, 7vw, 6rem), growing to clamp(5rem, 12vw, 10rem) above the close. Rows use 1.6rem vertical padding with a fluid inset (10px-20px) so hover washes have breathing room.
 
-Each sheet is a CSS grid. The hero spiral has equal unit cells; the practices and how-we-work sheets use weighted rows:
-- **Hero:** 16 x 8 units on a landscape sheet, cut as a spiral: an 8 x 8 sage field tile (headline and caption "For founders and product teams who need it built right the first time."), then 8 x 4 ink (deck, ending "We have worked in many startups that scaled up. We use AI across our work, with senior engineers accountable for what ships.", and button), 4 x 4 (`.t3` "practices"), 4 x 2 (`.t4` "how we work"), 2 x 2 (`.t5` fact "15 years of experience"), 2 x 1 (`.t6` fact "based in greece"), and two 1 x 1 end units (`.t7` empty, `.t8` ink), both aria-hidden. The two navigation tiles are links; the fact tiles are plain text (500 weight, bottom-aligned). There is no contact tile in the hero. The `span` labels of `.t5` and `.t6` are hidden between 701px and 1000px, where the tiles are too small; at 700px and below only `.t6`'s label is hidden (`.t5` keeps its label). The 1 : 1.414 proportion holds only down to 701px wide. At 700px and below the spiral is a portrait 8 x 16 grid (aspect-ratio declared 1 : 1.414; measured about 0.65 at 390px) and the nav descriptors are hidden. At 480px and below the hero stops being one sheet and stacks as separate sheets: the sage tile full width at the sheet ratio, the ink tile full width beneath it, then `.t3`, `.t4` and `.t5` in one row; `.t6`, `.t7` and `.t8` are hidden.
-- **Practices:** 4 x 2 cut of seven practice tiles plus one sage lead tile, rows 1fr / 0.7fr (the lower row is shorter, so tiles are not exactly equal cuts above 1000px). At 1000px and below it becomes 2 columns, each tile holding the sheet ratio (the sheet itself no longer does); at 700px and below it becomes one joined stack of full-width tiles separated by cuts (min-height 9rem, 18px padding). The stacked practice and how-we-work sheets are not A-series.
-- **How we work:** 2 x 2 cut of three practice-style tiles and a sage closing tile, rows 0.75fr / 1fr (the upper row is shorter); same tablet and mobile behavior (tiles take the sheet ratio at 1000px and below, so the tablet and phone layouts are not affected by the row weights). The first two tiles end with a bottom-pinned `.fact` line (see Tiles); the third has none.
-
-Cuts are drawn once, by one rule: the sheet owns its top and left edges and every tile draws its right and bottom edges (one `--cut`, 1.5px declared, 1px rendered on standard displays), so each seam and the outer frame are the same weight with no per-tile overrides.
-
-Tile padding is `{spacing.tile-pad}` (cqw-based; 12px on the hero at 700px and below, 18px on the practice stacks). Practice and how-we-work tiles are top-aligned: the title first, the copy directly beneath it (gap 0.9em, 2.5rem on mobile stacks). Lead and closing tiles differ: the lead heading sits at the tile bottom, the closing tile sets heading top and action bottom (space-between). The header bar has 0.7rem block padding with items centered; the logo link carries 0.4rem block padding around a 2.5rem-tall SVG. There is no header or footer email link. The closing tile ends with the line "Tell us what you are building: info@datadrift.gr" (the address is a link, 0.4rem block padding). The footer reads "© 2026 datadrift". Crop marks, 8px ticks at 14px outside each corner, frame each sheet and are hidden at 700px and below.
+Responsive: at 900px rows collapse to one column and the three columns stack with top rules. At 640px nav links hide (the contact button stays), the system canvas changes aspect from 2.6:1 to 0.85:1 (and the script turns the flow vertical when the canvas is under 560px wide), and buttons go full width. Coarse pointers get taller buttons and links.
 
 ## Elevation & Depth
 
-Flat. There are no shadows, blurs, or layered surfaces. Depth comes from field contrast (sage, ink, off-white) and from the ink cuts. The only state response is fill: nav tiles and buttons swap fills on hover, and the nav descriptor shifts from Secondary Ink to On-Ink text (`#D6D2CA`) on the ink fill. No hue shifts.
+Flat. There are no shadows, gradients or blurs. Depth is made by tonal inversion (ground to ink) and by hairlines. The build contains no box-shadows at all.
+
+### Named Rules
+**The Flat Always Rule.** Surfaces never lift. Hover is a fill change, not a shadow.
 
 ## Shapes
 
-Square. No radii anywhere. Form language is the rectangle, the 1.414 proportion, and the cut: 1.5px declared (1px rendered on standard displays) ink between tiles and around the sheet, and 1px crop-mark ticks at the corners. Links are underlined at 1px thickness with a 0.2em offset.
+Square. Radius is 0 on buttons, the system frame, nodes, rows and logo cells. Form is built from 1px hairlines and filled rectangles. The logo is a 3x3 grid of squares with a cut-out centre and its right column slipped down; the diagram's nodes, packets and status marker are plain squares, with no slipped geometry.
 
 ## Components
 
 ### Buttons
-- **Shape:** square, no border.
-- **Primary (`.btn`), on the ink hero tile:** off-white fill (`{colors.ground}`), Ink 500-weight label (max(0.9375rem, 1.3cqw)), padding 0.8em 1.3em, no underline. Hover: sage field fill, Ink text, 0.2s.
-- **Closing (`.end .btn`), on the sage closing tile:** inverted: Ink fill, off-white label. Hover: off-white fill, Ink text.
-- **Focus:** 3px outline, 3px offset, Ink on every tile except the ink hero tile (`.t2`), where it is off-white. Nav tiles (`.nav`) are the exception to the offset: the ring is drawn inside the tile (outline-offset -8px), Ink; a hovered and focused nav tile (`.nav:hover:focus-visible`) gets an off-white ring, since the fill is then Ink. At 700px and below the hero button is block width and centered.
+- **Shape:** square, 1px ink border, Geist Mono 500 uppercase 0.8125rem, padding 0.95em 1.4em (taller on coarse pointers).
+- **Ink (primary):** ink fill, ground text; hover inverts to transparent with ink text. Used for the nav contact and the hero action.
+- **Line (secondary):** transparent, ink text; hover fills ink.
+- **Paper (on ink):** white fill, ink text; hover goes transparent with white text. Used only in the close section.
+- **Press:** `translateY(1px)`. Transitions 0.2s on background and colour.
+- **Focus:** 2px ink outline, 3px offset (white on ink surfaces).
 
-### Tiles
-- **Plain tile:** off-white, Ink title, Secondary Ink copy, top-aligned.
-- **Field tile:** sage (`{colors.field}`), Ink text: hero headline, practices lead, closing tile.
-- **Ink tile:** Ink fill, off-white text, On-Ink copy in the practices sheet.
-- **Fact line (`.fact`):** in the three how-we-work content tiles, a bottom-pinned (margin-top auto) Ink line, 500 weight, max(1rem, 1.55cqw), line-height 1.3, max 22em: "15 years of building and running engineering, in corporate and startup companies." and "A small senior core, with associates brought in project by project." The third tile ("built to be run") carries "AI across design, build, test and run."
-- **Hero fact tiles (`.t5`, `.t6`):** "15 years of experience" and "based in greece", class `fact`, 500 weight, max(0.875rem, 1.2cqw), tracking -0.02em, bottom-aligned; the `span` labels are hidden between 701px and 1000px, and `.t6`'s also at 700px and below.
-- Tiles are separated only by the Ink cuts (1.5px declared) they draw on their right and bottom edges; the sheet draws top and left.
+### Header
+Sticky, ground background, 1px hairline below. Logo lockup left (2.25rem high, 2rem on mobile), mono nav links right with an underline that draws in on hover (0.3s) and the ink contact button. Hovering or focusing the mark replays the right-column slip.
 
-### Navigation
-The header is the logo link (left, `aria-label="Datadrift, top of page"`, SVG `aria-hidden`) alone, no menu and no email link. Inside the hero, two nav tiles (`.t3` "practices", `.t4` "how we work") stack an underlined 500-weight label (`.lbl`) over a one-line descriptor (`.desc`: "seven practices, from architecture to product"; "a small senior core, with associates as needed"), aligned to the tile bottom; hover fills the tile Ink with off-white label and On-Ink descriptor; the focus ring sits inside the tile. Contact is the two buttons (hero and closing tile) and the address line in the closing tile. A skip link appears on focus as an Ink block. The page title is "Datadrift: senior engineering studio".
+### Ruled Rows
+A list with a 1px hairline above each row and one below the last. Title left, mid-grey copy right. Hover washes the row white. One row (agentic development) is permanently ink with white text, as a single inverted emphasis in the list; its top rule is drawn ink so it merges with the fill.
 
-### Social preview
-`og.png` (1200 x 630) is referenced by `og:image`, `og:image:width`, `og:image:height` and `twitter:card` `summary_large_image`. Its composition reuses the sheet language: a sage headline sheet, an ink tile carrying the logo lockup in off-white (sage centre cell kept), and an off-white scope line. Regenerated from the lockup in `brand/`; it is not an on-page image.
+### Three Ruled Columns
+Three articles divided by 1px vertical hairlines under a 1px top rule; each ends with a short ink 500-weight fact pinned to the bottom (min-height 22rem on desktop).
 
-### Favicon
-`favicon.svg` (linked as `image/svg+xml`, replacing the earlier data-URI): an off-white square (`{colors.ground}`) holding the Ink grid mark with the Sage centre cell (`{colors.field}`), the mark only, no wordmark.
+### System Frame (signature)
+A light framed panel: 1px `line` border, ground fill, no radius (`.frame`). Inside, a canvas (`.sys`, aspect 2.6:1, 0.85:1 under 640px) draws a live, synthetic diagram of a service architecture holding under failure. Faint 24px dot grid (ink at 13%) on the ground. Eight square nodes (CLIENT, EDGE, API A, API B, QUEUE, WORKER A, WORKER B, DATABASE), white fill, 1px ink border, Geist Mono 400 uppercase 11px (10px on narrow), 118x34 (92x28 narrow). Elbow connector lines 1px at 55% ink. Request packets are 7px ink squares with a 1px white keyline; a node inverts to ink fill with white label for 160ms when a packet arrives. Status line top-left: a 9px square, filled when healthy and hollow when down, followed by mono text (ALL SERVICES HEALTHY, API B DOWN. TRAFFIC REROUTED, API B RECOVERED). A `mid` "ILLUSTRATION" label sits bottom-right: the diagram is synthetic and says so.
 
-### Logo
-The "slipped grid" lockup, inline SVG in the header (`.mark svg`, 2.5rem tall, width auto, viewBox 730 x 250, `aria-hidden`; the link supplies the accessible name). A 3 x 3 grid of 64-unit squares with 12-unit gaps in Ink (`currentColor`), whose right column is shifted down 34 units; the centre cell is Sage (`#CBD3C0`). Beside it, the lowercase wordmark "datadrift" is drawn as outlines from Hanken Grotesk 500 at 0.8 x 150 units, so it does not depend on the font loading. The grid is the sheet idea in miniature: cells cut from one unit, one column drifted. Sources: `brand/logo-datadrift.svg`; ten explored alternatives in `brand/logo-alternatives/` (PNG and SVG), kept as reference, not for use on the page. The mark inherits Ink via `.mark` colour; it is not otherwise themed.
+Motion: nodes appear left to right (scale 0.85 to 1 with fade, 400ms each) and connector lines draw in behind them from 1.5s (the panel's own start delay); packet flow begins at about 3.2s, one request every 650-1000ms from client to database at 190px/s. Every 12s API B goes down for 4s (hatched ink-at-28% fill, dashed border, dashed lines at 30% ink, `mid` label), in-flight packets on it are dropped, new traffic routes through API A, then it recovers and the status reads RECOVERED until the cycle returns to healthy. Rendering runs at about 30fps and pauses when the canvas is offscreen. Under 560px canvas width the flow turns vertical (client top, database bottom) and packets slow to 110px/s. The canvas carries a role="img" description of the whole sequence. Under `prefers-reduced-motion` it draws one static healthy diagram with no loop. Below the canvas, a mono status bar (0.75rem uppercase, `mid`, 1px `line` top rule) holds two facts, "15 years of experience" left and "based in greece" right.
 
-### Sheet
-The signature component: a 1 : 1.414 rectangle with crop marks, cut into unit tiles by a grid (equal in the hero spiral, weighted rows in the lower sheets); the sheet draws top and left cuts, tiles draw right and bottom. Any new section is a sheet cut by a stated ratio (for example 4 x 2 or 2 x 2), not a free-form layout.
+### Close Section
+Full-bleed ink with white text. Display heading in three lines, a left-aligned paper button, the contact address in `mid-on-ink` with a white link, and a right-aligned mono footer over a 20% white hairline.
 
-### Motion
-Tiles enter once, when their sheet is 20% visible: a clip-path cut from the top (0.9s, `cubic-bezier(0.16, 1, 0.3, 1)`), settling with a slight overshoot. The clip ends at `inset(-8px)`, not `inset(0)`, so outlines (inside-drawn focus rings and edges) are not clipped after the entrance, staggered 110ms per tile in source order. With reduced motion or no IntersectionObserver, all tiles render static in their final state.
+### Page Entry Motion
+There is no loader or overlay; the page is present on arrival, and `main` fades in with a 6px rise (0.5s, ease-out). The hero staging copies factory.com's own sequence, driven by `script.js` while `html.pre` holds the hero parts at opacity 0 (cleared by the script, with a 5s failsafe). The hero mark spins in from -540deg to 0 over 1.6s, ease-out quart `cubic-bezier(0.165, 0.84, 0.44, 1)`, fading in over 0.5s. The h1 (two lines) is split into letters that scramble through the glyph noise `0123456789!<>-_/[]{}=+*^?#%&$@|~;:` left to right: 20ms stagger, 340ms per letter, the face alternating Geist Mono and Geist on every 40ms tick, the last 28% of each letter showing the real character. Line two starts after half of line one's letters. The mono subline scrambles from 0.9s (12ms stagger, 300ms per letter, 34ms tick). The buttons, the caption and the framed system panel fade in together at 1.25s (0.6s, ease-out), and the diagram starts drawing at about 1.5s. The h1 keeps its full text as an `aria-label`. Hovering or focusing the header mark still replays the right-column slip (0.7s). Easing for scroll arrival and the slip is `cubic-bezier(0.16, 1, 0.3, 1)`; the hero staging uses the ease-out curves named above.
+
+### Scroll Arrival
+Ruled lines draw in (scaleX, 1.1s, 70ms stagger), three-column borders fade in, and the close heading lines rise through masks (0.9s, 90ms stagger; the only remaining use of mask-rise), each when its section reaches 15% visibility.
+
+### Reduced Motion
+With `prefers-reduced-motion: reduce` there is no hero staging (no spin, scramble, fades or page rise), everything is settled and visible, there are no rise, slip or line-draw animations, no smooth scroll, and sections are marked arrived immediately. Without JavaScript nothing is hidden either: the `pre` hold is only ever set by script. The system frame draws a single static healthy diagram and runs no loop.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** keep every new sheet at 1 : 1.414 while it is a sheet (701px wide and up) and cut it into stated units (the hero spiral, 4 x 2, 2 x 2); row weights may differ (practices 1fr / 0.7fr, how-we-work 0.75fr / 1fr) while the outer sheet stays 1 : 1.414.
-- **Do** size sheet type in cqw with a rem floor, and fall back to rem on mobile stacks.
-- **Do** draw cuts as 1.5px Ink right and bottom borders on tiles, with the sheet owning top and left.
-- **Do** keep Ink as the text color on sage and off-white, and off-white as the text color on Ink.
-- **Do** mark the action by contrast (off-white button on the ink tile, ink button on the sage tile), and keep the focus ring Ink except on the ink hero tile, where it is off-white.
-- **Do** use the logo only as built: Ink (`currentColor`) grid with the Sage centre cell (`#CBD3C0`), on off-white or sage; on the ink tile (social preview) the lockup is off-white with the sage centre cell. Keep clear space of one grid cell (64 units) on every side, and never render it shorter than the built 2.5rem header height.
-- **Do** play the cut-in once and keep a static fallback for reduced motion.
+- **Do** use only `ink`, `ground`, `white`, `mid` and `mid-on-ink`; make emphasis by inversion.
+- **Do** keep corners square and structure at 1px hairlines.
+- **Do** set headings uppercase Geist 500 with negative tracking; set buttons and labels in uppercase Geist Mono.
+- **Do** keep one slip per surface: the logo is the only slipped thing.
+- **Do** keep reduced-motion users on the final composed state with nothing hidden.
+- **Do** use `cubic-bezier(0.16, 1, 0.3, 1)` for scroll arrival and settle motion; the hero staging keeps its own ease-out curves.
 
 ### Don't:
-- **Don't** add shadows, radii, gradients, or on-page imagery.
-- **Don't** add another surface color, tint, or a second typeface, or a third weight.
-- **Don't** introduce any hue beyond sage or any other accent colour; sage is the only hue, and the action is marked by contrast, not colour.
-- **Don't** recolour the logo beyond Ink / off-white with the Sage centre cell, retype the wordmark in live text, or restyle, stretch, outline or shadow it; do not invent client logos or proof (metrics, testimonials); none exists.
-- **Don't** distort the sheet ratio to fit a layout above 700px; below that, the hero turns portrait and the lower sheets stack, and the stack is not claimed to be A-series.
+- **Don't** add an accent hue, gradient, shadow, blur or rounded corner.
+- **Don't** introduce cards; use ruled rows and ruled columns.
+- **Don't** use `mid` text on ink or `mid-on-ink` on ground.
+- **Don't** add a loader, intro overlay or any motion that blocks interaction; the page is present on arrival.
 
-### Not canonized
-Observed in the build and not recorded as rules: the ten logo alternatives in `brand/logo-alternatives/` still use the old warm stone (`#D8D2C6`) and are reference only, not updated to sage; the hero's two smallest tiles (`.t7`, `.t8`) are empty, aria-hidden spiral units hidden at 480px and below; the logo's Sage centre cell (`#CBD3C0`) and `favicon.svg`/`og.png` colours are hard-coded in the SVG sources, and the minimum logo height is the built 2.5rem rather than a tested floor; the declared `--cut` of 1.5px renders as 1px in Chrome on standard displays, so the "same weight" claim holds only in declared value; the portrait hero measures about 0.65 rather than the declared 0.707 at 390px; the On-Ink color `#D6D2CA` is hard-coded in the stylesheet (copy on the practices ink tile and the hovered nav descriptor) rather than drawn from a custom property, and `--on-ink` is a token here but only `--field`, `--ink`, `--ink-2` and `--ground` exist in the CSS root; the unequal row weights (0.7fr, 0.75fr) are recorded as built layout, not as a license to break the ratio elsewhere; `.t5`'s label stays visible at 700px and below while `.t6`'s is hidden, and both are hidden at 701 to 1000px, a pragmatic fit to tile size rather than a rule; the `.t5`/`.t6` `fact` class carries no styles of its own (the how-we-work `.fact` rule is scoped to `.cut4`).
+### Known drift (recorded, not canonized)
+- The surface brief quotes mid as #6B6B6B and hairlines at ink 14%; the build uses #5F5F5F and 20%. The build is recorded here.
+- Hairlines are stored as hard-coded rgba values in `:root`, not as ground/ink derivations; they should be treated as two fixed tokens, not a pattern for new alpha colours.
+- The detector's overused-font notice for Geist is a deliberate choice for this world, not an oversight.
+- Mono uppercase lines under the hero ("by senior specialists") and the system frame bar are tolerated by this build as page-specific copy lines; they are not a license for new kicker or eyebrow labels above headings.

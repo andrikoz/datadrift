@@ -7,18 +7,18 @@ related_targets: []
 
 # Surface brief: index.html
 
-Mode: Persuade. Static one-page site for Datadrift (datadrift.gr). Action: mailto info@datadrift.gr. Replacement of the earlier "Conductor's Score" world (user: music metaphor too far, too cold and quiet). User asked for a design-and-scale concept; "scale" means systems growing, held by design.
+Mode: Persuade. Static one-page site for Datadrift (datadrift.gr). Action: mailto info@datadrift.gr. Second replacement world: the user pinned a direction ("black and white concept" and an opening animation in the manner of factory.com), so the roll is skipped. Product truth unchanged: 15 years, based in Greece, many startups scaled up, small senior core with associates, AI across the work, no portfolio, no AI data-handling promises, no header or footer email.
 
 ## Direction contract
 
-THESIS: One proportion at every size: an ISO A-series sheet cut in half keeps its shape, so the page shows one design holding as it is cut smaller. Refuses the agency page of headline, three-up cards and logo wall.
+THESIS: A monochrome page that is simply there, as factory.com is, with two authored moments: a scrambled, spinning hero opening, and a live diagram of a system holding under failure (a service goes down, traffic reroutes, it recovers). Refuses a loader, colour, cards, the agency hero and any second copy of the logo.
 
-OWN-WORLD: Quiet neutral sheets with one muted sage field: sage #CBD3C0, ink #14110F, off-white #F2F2EE, secondary ink #4A4743; sage is the only hue, the action is marked by the black tile and its off-white button. Hard edges, no gradients or shadows. Hanken Grotesk 400/500, lowercase headings, type sized from the sheet width. Hairline cut lines at every split, crop marks at sheet corners. Recognizable with copy removed.
+OWN-WORLD: Neutral white and black only: ground #F4F4F4, white #FFFFFF, ink #0A0A0A, mid #6B6B6B, hairlines at ink 14%. Geist 500/600 set uppercase and tight for display, Geist Mono uppercase for labels and buttons. Square corners, 1px rules, black solid and outlined buttons, a framed system-diagram panel. No gradients, shadows or accent hue. Recognizable with copy removed: ruled rows, one framed system diagram, a three-by-three slipped grid.
 
-STORY: Visitor sees one precise system, believes a senior studio built it, and emails.
+STORY: Visitor sees a precise, severe studio, believes senior people hold the system together, and emails.
 
-FIRST VIEWPORT: Header with wordmark and email. One landscape sheet fitted to the viewport, cut as a spiral: left half sage with the h1 at large scale; top-right quarter ink with deck and the "Start a conversation" button; smaller sheets below are two links (practices, how we work) with one-line descriptors, two true fact tiles (fifteen years of experience; based in greece) and two empty tiny sheets. On narrow screens the sheet rotates to portrait.
+FIRST VIEWPORT: Slim header: mark left, nav (practices, how we work) and a black "contact" button right. Centred below: the mark at 88px, then the h1 "SOFTWARE BUILT TO HOLD." at up to 6rem uppercase in two lines, a mono line "BY SENIOR SPECIALISTS", a black button "START A CONVERSATION" with an outlined "PRACTICES" button, and the audience caption in small mono. The top of the framed system-diagram panel shows at the fold.
 
-FORM: A-series spiral and equal cuts (position 3 of 7), seed key d88195f5. Signature: sheets cut into place one by one and settle with weight; every cut keeps 1:1.414.
+FORM: Pinned by the brief, not rolled; no seed key. No loader. Hero staging copied from factory.com's own sequence: the mark spins in from -540deg over 1.6s, headline letters scramble through glyph noise, the mono subline scrambles at 0.9s, buttons, caption and the framed panel fade in at 1.25s. The framed panel (revised: the pixel mosaic repeated the logo) is a canvas illustration of a service architecture holding under failure: client, edge, two API replicas, queue, two workers, database, with request packets flowing; every 12s API B goes down (hatched, dashed), traffic reroutes, it recovers; status line top left, labelled ILLUSTRATION. Reduced motion shows the static healthy diagram.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
